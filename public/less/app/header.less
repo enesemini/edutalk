@@ -1,0 +1,57 @@
+.et-navbar{
+  background: @primary;
+  border: none;
+  .navbar-brand{
+    color: white;
+  }
+  li{
+    a{
+      color: white;
+    }
+    &:hover{
+      a{
+        background: none;
+      }
+    }
+    &.active{
+      a{
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.header-profile img{
+  margin-top: 20px;
+  .img-circle;
+}
+.header-search{
+  position: relative;
+  input {
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 40px;
+    border: none;
+    width: 120px;
+    transition: all .4s ease-in-out;
+    &:focus {
+      width: 250px;
+      outline: none;
+    }
+  }
+  .navbar-form{
+    margin: 20px 0;
+  }
+  &:before{
+    .fa;
+    content:'\f002';
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    color: @red;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: @primary;
+  }
+}

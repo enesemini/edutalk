@@ -1,0 +1,1 @@
+/Users/Enes/Google Drive/Maturaarbeit/app/views/talks/edit.blade.php
