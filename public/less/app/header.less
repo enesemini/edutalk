@@ -2,15 +2,17 @@
   background: @primary;
   border: none;
   .navbar-brand{
-    color: white;
+    color: @white;
   }
   li{
     a{
-      color: white;
+      color: @white;
+      .transition(.4s all);
     }
     &:hover{
       a{
-        background: none;
+        background: @white;
+        color: @primary;
       }
     }
     &.active{
@@ -19,6 +21,24 @@
       }
     }
   }
+}
+.navbar-nav > li.header-login > a {
+  padding: 0;
+  line-height: 40px;
+  color: @primary;
+}
+
+.header-login{
+    height: 40px;
+    line-height: 40px;
+    background: @white;
+    color: @primary;
+    margin-top: 20px;
+    padding: 0 15px;
+    border-radius: 20px;
+    i{
+      margin-left: 10px;
+    }
 }
 
 .header-profile img{

@@ -146,6 +146,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/controllers\/AuthController.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/controllers\/AuthController.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/controllers\/BaseController.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -160,6 +169,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/controllers\/HomeController.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/controllers\/PagesController.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/controllers\/PagesController.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -335,6 +353,33 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/views\/_partials\/footer.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/_partials\/footer.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/_partials\/nav.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/_partials\/nav.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/_partials\/notifications.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/_partials\/notifications.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/views\/emails\/auth\/reminder.blade.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -358,6 +403,33 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/views\/layouts\/default.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/pages\/home.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/pages\/home.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/pages\/login.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/pages\/login.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/views\/pages\/register.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/views\/pages\/register.blade.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -439,15 +511,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/bootstrap\/autoload.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/bootstrap\/compiled.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/bootstrap\/compiled.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -621,6 +684,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/less\/app\/inputs.less",
 		"outputAbbreviatedPath": "\/public\/less\/css\/inputs.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/public\/less\/app\/login.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/less\/app\/login.less",
+		"outputAbbreviatedPath": "\/public\/less\/css\/login.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -2350,6 +2433,15 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
+		},
+	"\/readme.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/readme.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/readme.md": {
 		"enableFootnoteSupport": 0,
@@ -20882,633 +20974,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/vendor\/symfony\/filesystem\/Symfony\/Component\/Filesystem\/Tests\/FilesystemTestCase.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/AbstractAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/AbstractAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/AbstractFindAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/AbstractFindAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/AdapterInterface.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/AdapterInterface.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/BsdFindAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/BsdFindAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/GnuFindAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/GnuFindAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/PhpAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Adapter\/PhpAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/CHANGELOG.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/CHANGELOG.md",
-		"outputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/CHANGELOG.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Comparator\/Comparator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Comparator\/Comparator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Comparator\/DateComparator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Comparator\/DateComparator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Comparator\/NumberComparator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Comparator\/NumberComparator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/AccessDeniedException.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/AccessDeniedException.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/AdapterFailureException.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/AdapterFailureException.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/ExceptionInterface.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/ExceptionInterface.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/OperationNotPermitedException.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/OperationNotPermitedException.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/ShellCommandFailureException.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Exception\/ShellCommandFailureException.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/Expression.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/Expression.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/Glob.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/Glob.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/Regex.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/Regex.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/ValueInterface.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Expression\/ValueInterface.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Finder.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Finder.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Glob.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Glob.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/CustomFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/CustomFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/DateRangeFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/DateRangeFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/DepthRangeFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/DepthRangeFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/ExcludeDirectoryFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/ExcludeDirectoryFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilecontentFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilecontentFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilenameFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilenameFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilePathsIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilePathsIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FileTypeFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FileTypeFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/FilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/MultiplePcreFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/MultiplePcreFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/PathFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/PathFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/RecursiveDirectoryIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/RecursiveDirectoryIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/SizeRangeFilterIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/SizeRangeFilterIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/SortableIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Iterator\/SortableIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/README.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/README.md",
-		"outputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/README.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Shell\/Command.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Shell\/Command.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Shell\/Shell.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Shell\/Shell.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/SplFileInfo.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/SplFileInfo.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Comparator\/ComparatorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Comparator\/ComparatorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Comparator\/DateComparatorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Comparator\/DateComparatorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Comparator\/NumberComparatorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Comparator\/NumberComparatorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Expression\/ExpressionTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Expression\/ExpressionTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Expression\/GlobTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Expression\/GlobTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Expression\/RegexTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Expression\/RegexTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/DummyAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/DummyAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/FailingAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/FailingAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/NamedAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/NamedAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/UnsupportedAdapter.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FakeAdapter\/UnsupportedAdapter.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FinderTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/FinderTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/CustomFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/CustomFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/DateRangeFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/DateRangeFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/DepthRangeFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/DepthRangeFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/ExcludeDirectoryFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/ExcludeDirectoryFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilecontentFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilecontentFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilenameFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilenameFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilePathsIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilePathsIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FileTypeFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FileTypeFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/FilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/Iterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/Iterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/IteratorTestCase.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/IteratorTestCase.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/MockFileListIterator.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/MockFileListIterator.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/MockSplFileInfo.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/MockSplFileInfo.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/MultiplePcreFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/MultiplePcreFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/PathFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/PathFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/RealIteratorTestCase.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/RealIteratorTestCase.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/RecursiveDirectoryIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/RecursiveDirectoryIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/SizeRangeFilterIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/SizeRangeFilterIteratorTest.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/SortableIteratorTest.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/vendor\/symfony\/finder\/Symfony\/Component\/Finder\/Tests\/Iterator\/SortableIteratorTest.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

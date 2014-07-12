@@ -5,18 +5,28 @@
 | Application Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
 */
 
-Route::get('/', function()
+Route::get('test', function()
 {
-	$user = DB::table('users')->find(1);
+	$users = DB::table('users')->find(1);
 
-    return $user -> username;
+    return $users -> username;
 });
+
+/* Startseite */
+Route::get('/', array('as' => 'home', 'uses' => 'PagesController@home'));
+
+/* Login Routes */
+Route::get('login', array('as' => 'login', 'uses' => 'AuthController@login'));
+Route::post('login', array('as' => 'login', 'uses' => 'AuthController@postLogin'));
+Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
+
+
+
+/* Registration Routes */
+Route::get('register', array('as' => 'register', 'uses' => 'AuthController@register'));
+Route::post('register', array('as' => 'register', 'uses' => 'AuthController@postRegister'));
 
 Route::resource('talks', 'TalksController');
 

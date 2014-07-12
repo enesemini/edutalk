@@ -7,7 +7,7 @@
             <h1>All Users</h1>
             <ul class="list-group">
                 @foreach ($users as $user)
-                <li class="list-group-item">{{$user->username}}</li>
+                <li class="list-group-item">{{$user->email}}</li>
                 @endforeach
             </ul>
         </div>

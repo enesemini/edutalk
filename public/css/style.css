@@ -7586,31 +7586,76 @@ h3 {
 .timeline-container .file-talk p {
   line-height: 40px;
 }
+.login {
+  margin: 50px 0;
+}
+.login h2 {
+  margin-top: 0;
+  font-size: 2em;
+}
+.dark-hr {
+  border-top-color: #d5d5d5;
+}
+.et-tile {
+  background: #eeeeee;
+  padding: 30px;
+  border-radius: 5px;
+}
+.form-control {
+  margin-bottom: 10px;
+  border-color: transparent;
+  box-shadow: none;
+}
 .btn-et {
   padding: 6px 12px;
   -webkit-transition: 0.2s all linear;
   -o-transition: 0.2s all linear;
   transition: 0.2s all linear;
   border-radius: 4px;
+  background: none;
+  border: none;
+  color: #03a9f4;
 }
 .btn-et:hover {
   background: #ffffff;
+  color: #03a9f4;
 }
 .et-navbar {
   background: #03a9f4;
   border: none;
 }
 .et-navbar .navbar-brand {
-  color: white;
+  color: #ffffff;
 }
 .et-navbar li a {
-  color: white;
+  color: #ffffff;
+  -webkit-transition: 0.4s all;
+  -o-transition: 0.4s all;
+  transition: 0.4s all;
 }
 .et-navbar li:hover a {
-  background: none;
+  background: #ffffff;
+  color: #03a9f4;
 }
 .et-navbar li.active a {
   font-weight: bold;
+}
+.navbar-nav > li.header-login > a {
+  padding: 0;
+  line-height: 40px;
+  color: #03a9f4;
+}
+.header-login {
+  height: 40px;
+  line-height: 40px;
+  background: #ffffff;
+  color: #03a9f4;
+  margin-top: 20px;
+  padding: 0 15px;
+  border-radius: 20px;
+}
+.header-login i {
+  margin-left: 10px;
 }
 .header-profile img {
   margin-top: 20px;
