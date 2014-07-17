@@ -31,7 +31,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'first_name' => 'required',
         'last_name' => 'required'
     ];
-
+    /**
     public static $messages = [
         'username.required' => 'Der Username wird benötigt!',
         'password.required' => 'Es wird ein Passwort benötigt!',
@@ -40,5 +40,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         'last_name.required' => 'Der Nachname wird benötigt!',
 
     ];
+     */
 
 }

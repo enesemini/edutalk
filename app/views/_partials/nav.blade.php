@@ -19,7 +19,8 @@
                 @if (Auth::check())
                     <li class="header-profile"><img src="js/holder.js/40x40" alt=""/></li>
                 @else
-                <li class="header-login"><a href="{{ URL::route('login') }}">Login <i class="fa fa-sign-in"></i></a></li>
+                <li class=""><a href="{{ URL::route('login') }}">Anmelden <i class="fa fa-sign-in"></i></a></li>
+                <li class=""><a href="{{ URL::route('register') }}">Registrieren <i class="fa fa-lock"></i></a></li>
                 @endif
 
                 <li class="header-search">
