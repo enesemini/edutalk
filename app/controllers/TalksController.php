@@ -1,5 +1,6 @@
 <?php
 
+
 class TalksController extends \BaseController {
 
 	/**
@@ -10,8 +11,9 @@ class TalksController extends \BaseController {
 	public function index()
 	{
 		$talks = Talk::all();
+        $user = Auth::User();
 
-		return View::make('talks.index', compact('talks'));
+		return View::make('talks.index', compact('talks', 'user'));
 	}
 
 	/**
@@ -25,22 +27,28 @@ class TalksController extends \BaseController {
 	}
 
 	/**
-	 * Store a newly created talk in storage.
+	 * Neuen Talk in der Datenbank speichern
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Talk::$rules);
+        //message
+        $message = Input::get('message');
 
+        //Validate if message is empty
+		$validator = Validator::make([ 'message' => $message ], Talk::$rules);
+
+        //Redirect if Validation fails
 		if ($validator->fails())
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		Talk::create($data);
+        //Save a talk
+		Talk::create(['message' => $message, 'user_id' => Auth::user()->id]);
 
-		return Redirect::route('talks.index');
+		return Redirect::route('talks.index')->with('success', 'Ihr Talk wurde gespeichert!');
 	}
 
 	/**

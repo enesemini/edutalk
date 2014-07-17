@@ -22,12 +22,11 @@ Route::get('login', array('as' => 'login', 'uses' => 'AuthController@login'));
 Route::post('login', array('as' => 'login', 'uses' => 'AuthController@postLogin'));
 Route::get('logout', array('as' => 'logout', 'uses' => 'AuthController@logout'));
 
-
-
 /* Registration Routes */
 Route::get('register', array('as' => 'register', 'uses' => 'AuthController@register'));
 Route::post('register', array('as' => 'register', 'uses' => 'AuthController@postRegister'));
 
+/* Talk Routes */
 Route::resource('talks', 'TalksController');
 
 Route::resource('users', 'UsersController');
