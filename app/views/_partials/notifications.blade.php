@@ -10,7 +10,6 @@
 @endif
 
 @if ($errors->any())
-
 <div class="container">
     <div class="row">
         {{ implode('', $errors->all('
