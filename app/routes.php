@@ -30,3 +30,5 @@ Route::post('register', array('as' => 'register', 'uses' => 'AuthController@post
 Route::resource('talks', 'TalksController');
 
 Route::resource('users', 'UsersController');
+
+Route::resource('groups', 'GroupsController');

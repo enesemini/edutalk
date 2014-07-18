@@ -31,16 +31,20 @@ class GroupsController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Group::$rules);
+        $input = Input::all();
+        $name = Input::get('name');
+        $description = Input::get('description');
+        $private = Input::get('private');
+        $user = Auth::user()->id;
+		$validator = Validator::make($input, Group::$rules);
 
 		if ($validator->fails())
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
+		Group::create(['name' => $name, 'description' => $description, 'private' => $private, 'user_id' => $user]);
 
-		Group::create($data);
-
-		return Redirect::route('groups.index');
+		return Redirect::route('groups.index')->with('success', 'Die Gruppe wurde erstellt!');
 	}
 
 	/**

@@ -12,7 +12,7 @@
                 <!-- Message Form Input -->
                 <div class="form-group">
                     {{ Form::label('message','Message:') }}
-                    {{ Form::textarea('message', null, ['class' => 'form-control']) }}
+                    {{ Form::text('message', null, ['class' => 'form-control']) }}
                 </div>
                 <!--  Form Input -->
                 <div class="form-group">
@@ -25,7 +25,7 @@
 
             <ul class="list-group">
                 @foreach ($user->talks as $talk)
-                <li class="list-group-item">{{$talk->message}}</li>
+                <li class="list-group-item">{{$talk->message}} <span class="small grey">posted {{$talk->created_at->diffForHumans()}}</span></li>
                 @endforeach
             </ul>
         </div>
