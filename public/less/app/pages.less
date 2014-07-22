@@ -1,11 +1,11 @@
 // index of logged in users
 .friends-container, .timeline-container{
-  background: #ebf3f6;
+  background: @et-bg;
   padding: 15px;
   margin-bottom: 15px;
 }
 .groups-container{
-  background: #ebf3f6;
+  background: @et-bg;
   margin-bottom: 15px;
   padding: 15px 0;
   h3{
@@ -60,20 +60,40 @@
     }
   }
 }
-.timeline-container{
-  .fa-et{
-    .size(40px, 40px);
-    line-height: 40px;
-    background: @primary-light;
-    border-radius: 20px;
-    color: white;
-    text-align: center;
-    float: left;
-    margin-right: 10px;
+
+.fa-et {
+  .size(40px, 40px);
+  line-height: 40px;
+  background: @primary-light;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  float: left;
+  margin-right: 10px;
+}
+
+.file-talk {
+  p {
+    line-height: 1.4em;
   }
-  .file-talk{
+}
+
+.talk, .talk-body {
+  overflow: hidden;
+}
+.talk{
+  margin: 2em 0;
+  .user{
+    color: @primary;
+  }
+  .time{
+    font-size: .8em;
+    color: @grey;
+  }
+  .talk-body{
     p{
-      line-height: 40px;
+      margin-bottom: 0;
     }
   }
 }
+

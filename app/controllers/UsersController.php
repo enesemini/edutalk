@@ -52,8 +52,9 @@ class UsersController extends \BaseController {
 	public function show($id)
 	{
 		$user = User::findOrFail($id);
-
-		return View::make('users.show', compact('user'));
+        $followers = $user->followers();
+        $following = $user->following();
+		return View::make('users.show', compact('user', 'followers', 'following'));
 	}
 
 	/**

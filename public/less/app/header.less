@@ -5,23 +5,26 @@
     color: @white;
   }
   li{
-    a{
+    a.nav-link{
       color: @white;
       .transition(.4s all);
     }
     &:hover{
-      a{
-        background: @white;
-        color: @primary;
+      a.nav-link{
+        background: darken(@primary, 5%);
+        color: @white;
       }
     }
     &.active{
       a{
         font-weight: bold;
+        background: none;
+        color: @white;
       }
     }
   }
 }
+
 .navbar-nav > li.header-login > a {
   padding: 0;
   line-height: 40px;
@@ -42,7 +45,10 @@
 }
 
 .header-profile img{
-  margin-top: 20px;
+  float: left;
+  position: relative;
+  top: -10px;
+  left: -5px;
   .img-circle;
 }
 .header-search{
@@ -74,4 +80,8 @@
     line-height: 20px;
     color: @primary;
   }
+}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: darken(@primary, 5%);
+  border: none !important;
 }

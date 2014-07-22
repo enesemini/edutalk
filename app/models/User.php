@@ -51,4 +51,44 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasMany('Group');
     }
 
+    // Angemeldeter User folgt dem User mit der ID $id
+    public function follow($id)
+    {
+        //return false, wenn der User dem zweiten User bereits folgt
+        if (count(Follow::where('user_id',Auth::user()->id)->where('follow', $id)->first()) > 0)
+        {
+            return false;
+        }
+        // Eintrag in die user_follow Tabelle
+        Follow::create([
+            'user_id' => Auth::user()->id,
+            'follow' => $id
+        ]);
+    }
+
+    // Angemeldeter User will dem User mit der ID $id nicht mehr folgen
+    public function unfollow($id)
+    {
+        // prüft, ob der User dem anderen User überhaupt folgt und löscht den Eintrag aus der Tabelle
+        $follow = Follow::where('user_id',Auth::user()->id)->where('follow', $id)->first();
+        if (count($follow) > 0)
+        {
+            $follow->delete();
+        }
+    }
+
+    // Es werden alle Benutzer ausgelesen, denen der Benutzer folgt
+    public function following()
+    {
+        return Follow::where('user_id', $this->id)->get();
+    }
+
+    // Es werden alle Benutzer ausgelesen, die dem Benutzer folgen
+    public function followers()
+    {
+        return Follow::where('follow', $this->id)->get();
+    }
+
+
+
 }

@@ -7,25 +7,37 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><strong>edu</strong>talk</a>
+            <a class="navbar-brand" href="#"><i class="fa fa-graduation-cap"></i> <strong>edu</strong>talk</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Startseiten</a></li>
-                <li><a href="#about">Gruppen</a></li>
-                <li><a href="#contact">Nachrichten</a></li>
+                <li class="active"><a href="#" class="nav-link">Startseiten</a></li>
+                <li><a href="#" class="nav-link">Gruppen</a></li>
+                <li><a href="#" class="nav-link">Nachrichten</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
-                    <li class="header-profile"><img src="js/holder.js/40x40" alt=""/></li>
+                    <li class="dropdown header-profile">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
+                            <img src="js/holder.js/40x40" alt=""/> Username
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation" class="dropdown-header">Username</li>
+
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::to('/users/1')}}">Mein Profil</a></li>
+
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::to('/logout')}}">Abmelden <i class="fa fa-sign-out"></i></a></li>
+                        </ul>
+                    </li>
                 @else
-                <li class=""><a href="{{ URL::route('login') }}">Anmelden <i class="fa fa-sign-in"></i></a></li>
-                <li class=""><a href="{{ URL::route('register') }}">Registrieren <i class="fa fa-lock"></i></a></li>
+                <li class=""><a href="{{ URL::route('login') }}" class="nav-link">Anmelden <i class="fa fa-sign-in"></i></a></li>
+                <li class=""><a href="{{ URL::route('register') }}" class="nav-link">Registrieren <i class="fa fa-lock"></i></a></li>
                 @endif
 
                 <li class="header-search">
                     <form class="navbar-form" action="">
-                        <input type="text" placeholder="Suchen"/>
+                        <input type="text" placeholder="Suchen..."/>
                     </form></li>
             </ul>
         </div><!--/.nav-collapse -->

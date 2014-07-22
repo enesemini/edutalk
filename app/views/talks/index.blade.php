@@ -3,31 +3,25 @@
 @section ('content')
 <div class="container">
     <div class="row">
-        <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>Talks</h1>
-            <hr/>
-            <!-- Talk erstellen -->
-            <h2>Talk erstellen</h2>
-            {{ Form::open(array('route' => 'talks.store')) }}
-                <!-- Message Form Input -->
-                <div class="form-group">
-                    {{ Form::label('message','Message:') }}
-                    {{ Form::text('message', null, ['class' => 'form-control']) }}
-                </div>
-                <!--  Form Input -->
-                <div class="form-group">
-                    {{ Form::submit('Talk erstellen', array('class' => 'btn btn-et pull-right')); }}
-                </div>
-            {{ Form::close() }}
-            <div class="clearfix"></div>
-            <hr/>
-            <h1>Alle Talks vom eingeloggten User</h1>
+        <div class="col col-xs-6 col-xs-offset-3 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+            @include('_partials.createTalk')
 
-            <ul class="list-group">
-                @foreach ($user->talks as $talk)
-                <li class="list-group-item">{{$talk->message}} <span class="small grey">posted {{$talk->created_at->diffForHumans()}}</span></li>
-                @endforeach
-            </ul>
+            <hr/>
+            <div class="timeline-container">
+                <h3>Alle Talks vom eingeloggten User</h3>
+
+                    @foreach ($user->talks as $talk)
+                    <article class="file-talk talk">
+                        <i class="fa-et fa fa-graduation-cap"></i>
+                        <div class="talk-body">
+                            <p><span class="user">{{$talk->user->first_name}} {{$talk->user->last_name}}</span> {{$talk->message}}</p>
+                            <span class="time">posted {{$talk->created_at->diffForHumans()}}</span>
+                        </div>
+                    </article>
+                    @endforeach
+            </div>
+
+
         </div>
     </div>
 </div>
