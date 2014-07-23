@@ -16,6 +16,11 @@
                 <li><a href="#" class="nav-link">Nachrichten</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li class="header-search">
+                    <form class="navbar-form" action="">
+                        <input type="text" placeholder="Suchen..."/>
+                    </form>
+                </li>
                 @if (Auth::check())
                     <li class="dropdown header-profile">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
@@ -24,7 +29,7 @@
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation" class="dropdown-header">Username</li>
 
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::to('/users/1')}}">Mein Profil</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('users.show', Auth::user()->username)}}">Mein Profil</a></li>
 
                             <li role="presentation" class="divider"></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::to('/logout')}}">Abmelden <i class="fa fa-sign-out"></i></a></li>
@@ -35,10 +40,7 @@
                 <li class=""><a href="{{ URL::route('register') }}" class="nav-link">Registrieren <i class="fa fa-lock"></i></a></li>
                 @endif
 
-                <li class="header-search">
-                    <form class="navbar-form" action="">
-                        <input type="text" placeholder="Suchen..."/>
-                    </form></li>
+
             </ul>
         </div><!--/.nav-collapse -->
     </div>

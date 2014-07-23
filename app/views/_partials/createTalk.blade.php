@@ -1,5 +1,5 @@
 <div class="timeline-container">
-    {{ Form::open(array('route' => 'talks.store')) }}
+    {{ Form::open(['route' => 'talks.store']) }}
     <!-- Message Form Input -->
     <div class="form-group">
         {{ Form::label('message','Talk schreiben:', ['class' => 'sr-only']) }}

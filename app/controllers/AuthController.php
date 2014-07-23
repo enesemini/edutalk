@@ -49,7 +49,7 @@ class AuthController extends \BaseController {
     {
         $input = Input::only('email','username','password','password_confirmation','first_name','last_name');
 
-        $validator = Validator::make($input, User::$rules, User::$messages);
+        $validator = Validator::make($input, User::$rules);
 
         if ($validator->fails())
         {

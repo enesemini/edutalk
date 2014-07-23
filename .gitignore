@@ -7,4 +7,5 @@ composer.lock
 .DS_Store
 Thumbs.db
 config.codekit
-.idea/
+.idea/workspace.xml
+.idea/*

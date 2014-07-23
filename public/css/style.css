@@ -2837,8 +2837,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #008000;
-  border-color: #006700;
+  background-color: #36b336;
+  border-color: #309f30;
 }
 .btn-success:hover,
 .btn-success:focus,
@@ -2846,8 +2846,8 @@ fieldset[disabled] .btn-primary.active {
 .btn-success.active,
 .open > .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #004d00;
-  border-color: #002900;
+  background-color: #2a8c2a;
+  border-color: #227022;
 }
 .btn-success:active,
 .btn-success.active,
@@ -2869,11 +2869,11 @@ fieldset[disabled] .btn-success:active,
 .btn-success.disabled.active,
 .btn-success[disabled].active,
 fieldset[disabled] .btn-success.active {
-  background-color: #008000;
-  border-color: #006700;
+  background-color: #36b336;
+  border-color: #309f30;
 }
 .btn-success .badge {
-  color: #008000;
+  color: #36b336;
   background-color: #ffffff;
 }
 .btn-info {
@@ -2960,8 +2960,8 @@ fieldset[disabled] .btn-warning.active {
 }
 .btn-danger {
   color: #ffffff;
-  background-color: #ff0000;
-  border-color: #e60000;
+  background-color: #dd191d;
+  border-color: #c6161a;
 }
 .btn-danger:hover,
 .btn-danger:focus,
@@ -2969,8 +2969,8 @@ fieldset[disabled] .btn-warning.active {
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
   color: #ffffff;
-  background-color: #cc0000;
-  border-color: #a80000;
+  background-color: #af1417;
+  border-color: #8f1013;
 }
 .btn-danger:active,
 .btn-danger.active,
@@ -2992,11 +2992,11 @@ fieldset[disabled] .btn-danger:active,
 .btn-danger.disabled.active,
 .btn-danger[disabled].active,
 fieldset[disabled] .btn-danger.active {
-  background-color: #ff0000;
-  border-color: #e60000;
+  background-color: #dd191d;
+  border-color: #c6161a;
 }
 .btn-danger .badge {
-  color: #ff0000;
+  color: #dd191d;
   background-color: #ffffff;
 }
 .btn-link {
@@ -4460,11 +4460,11 @@ a.label:focus {
   background-color: #0286c2;
 }
 .label-success {
-  background-color: #008000;
+  background-color: #36b336;
 }
 .label-success[href]:hover,
 .label-success[href]:focus {
-  background-color: #004d00;
+  background-color: #2a8c2a;
 }
 .label-info {
   background-color: #5bc0de;
@@ -4481,11 +4481,11 @@ a.label:focus {
   background-color: #ec971f;
 }
 .label-danger {
-  background-color: #ff0000;
+  background-color: #dd191d;
 }
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-  background-color: #cc0000;
+  background-color: #af1417;
 }
 .badge {
   display: inline-block;
@@ -4730,7 +4730,7 @@ a.thumbnail.active {
   box-shadow: none;
 }
 .progress-bar-success {
-  background-color: #008000;
+  background-color: #36b336;
 }
 .progress-striped .progress-bar-success {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -4754,7 +4754,7 @@ a.thumbnail.active {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 .progress-bar-danger {
-  background-color: #ff0000;
+  background-color: #dd191d;
 }
 .progress-striped .progress-bar-danger {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -7733,6 +7733,7 @@ button.close {
   content: "\f1e2";
 }
 body {
+  background: #f2FaFd;
   -webkit-font-smoothing: antialiased;
 }
 h3 {
@@ -7743,13 +7744,15 @@ h3 {
   margin: 0 0 15px 0;
 }
 .friends-container,
-.timeline-container {
-  background: #ebf3f6;
+.timeline-container,
+.et-container {
+  background: #ffffff;
   padding: 15px;
   margin-bottom: 15px;
+  box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.12);
 }
 .groups-container {
-  background: #ebf3f6;
+  background: #ffffff;
   margin-bottom: 15px;
   padding: 15px 0;
 }
@@ -7811,26 +7814,6 @@ h3 {
   float: left;
   margin-right: 10px;
 }
-.file-talk p {
-  line-height: 1.4em;
-}
-.talk,
-.talk-body {
-  overflow: hidden;
-}
-.talk {
-  margin: 2em 0;
-}
-.talk .user {
-  color: #03a9f4;
-}
-.talk .time {
-  font-size: .8em;
-  color: #666666;
-}
-.talk .talk-body p {
-  margin-bottom: 0;
-}
 .login {
   margin: 50px 0;
 }
@@ -7845,6 +7828,103 @@ h3 {
   background: #eeeeee;
   padding: 30px;
   border-radius: 5px;
+}
+.profile-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.profile-pic {
+  border-radius: 999px;
+  margin-top: 30px;
+}
+.profile-name {
+  font-size: 1.2em;
+}
+.follow-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 45px;
+  border-radius: 100px;
+  background: #81d4fa;
+  color: white;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.follow-btn:hover {
+  text-decoration: none;
+  color: white;
+  background: #03a9f4;
+}
+.unfollow-btn {
+  position: relative;
+  background: #36b336;
+}
+.unfollow-btn:before {
+  content: 'Nicht mehr folgen';
+  position: absolute;
+  padding: 10px 0px;
+  width: 100%;
+  border-radius: 100px;
+  background: #dd191d;
+  color: white;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.unfollow-btn:hover {
+  background: #dd191d;
+}
+.unfollow-btn:hover:before {
+  opacity: 1;
+}
+.short-link {
+  color: #d0d0d0;
+}
+.follow-count {
+  color: #0277bd;
+}
+.follow-container {
+  margin: 0 -15px 15px;
+  overflow: hidden;
+}
+.follow-thumb {
+  display: inline-block;
+  float: left;
+  width: 33.333%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.follow-thumb img {
+  width: 100%;
+}
+.file-talk p {
+  line-height: 1.4em;
+}
+.talk,
+.talk-body {
+  overflow: hidden;
+}
+.talk {
+  margin: 0 -15px;
+  padding: 2em 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.talk .user {
+  color: #03a9f4;
+}
+.talk .time {
+  font-size: .8em;
+  color: #4f5961;
+}
+.talk-body p {
+  margin-bottom: 0;
+  margin-top: 5px;
+  color: #4f5961;
 }
 .form-control {
   margin-bottom: 10px;
@@ -7953,7 +8033,7 @@ h3 {
   position: absolute;
   top: 30px;
   left: 25px;
-  color: #ff0000;
+  color: #dd191d;
   width: 20px;
   height: 20px;
   line-height: 20px;

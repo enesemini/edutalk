@@ -49,12 +49,16 @@ class UsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($username)
 	{
-		$user = User::findOrFail($id);
-        $followers = $user->followers();
-        $following = $user->following();
-		return View::make('users.show', compact('user', 'followers', 'following'));
+		$user = User::where('username', $username)->first();
+        $followers = $user->followers()->take(6);
+        $following = $user->following()->take(6);
+
+        $followersCount = count($user->followers());
+        $followingCount = count($user->following());
+
+		return View::make('users.show', compact('user', 'followers', 'following', 'followersCount', 'followingCount'));
 	}
 
 	/**
@@ -63,9 +67,9 @@ class UsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($username)
 	{
-		$user = User::find($id);
+        $user = User::where('username', $username)->first();
 
 		return View::make('users.edit', compact('user'));
 	}

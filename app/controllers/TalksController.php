@@ -1,7 +1,15 @@
 <?php
 
+use Edutalk\Repositories\TalksRepository;
 
 class TalksController extends \BaseController {
+
+
+    protected $talk;
+    public function __construct(TalksRepository $talk)
+    {
+        $this->talk = $talk;
+    }
 
 	/**
 	 * Display a listing of talks
@@ -48,7 +56,7 @@ class TalksController extends \BaseController {
         //Save a talk
 		Talk::create(['message' => $message, 'user_id' => Auth::user()->id]);
 
-		return Redirect::route('talks.index')->with('success', 'Ihr Talk wurde gespeichert!');
+		return Redirect::back()->with('success', 'Ihr Talk wurde gespeichert!');
 	}
 
 	/**

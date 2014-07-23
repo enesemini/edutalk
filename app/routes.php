@@ -33,6 +33,13 @@ Route::resource('users', 'UsersController');
 
 Route::resource('groups', 'GroupsController');
 
+/* Follow Routes */
+Route::get('follow/{username}', ['as' => 'follow', 'uses' => 'FollowController@follow']);
+Route::get('unfollow/{username}', ['as' => 'unfollow', 'uses' => 'FollowController@unfollow']);
+
+
+/* User Routes */
+Route::get('/@{username}', ['as' => 'users.show', 'uses' => 'UsersController@show']);
 
 
 /* Test Routes */
@@ -42,7 +49,6 @@ Route::get('test', function()
 
     return $user->follow(9);
 
-    return $user->follow()->attach(10);
     //return dd($user->follow());
 });
 
@@ -50,9 +56,9 @@ Route::get('test2', function()
 {
     $user = User::find(9);
 
+    $user->follow(13);
 
+    //return User::with('groups')->find(9);
 
-
-    $user->groups()->attach(7);
 
 });

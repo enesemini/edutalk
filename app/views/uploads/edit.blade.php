@@ -1,0 +1,1 @@
+/Users/Enes/Google Drive/edutalk/app/views/uploads/edit.blade.php

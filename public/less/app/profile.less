@@ -1,0 +1,72 @@
+.profile-info{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.profile-pic{
+  border-radius: 999px;
+  margin-top: 30px;
+}
+.profile-name{
+  font-size: 1.2em;
+}
+.follow-btn{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 45px;
+  border-radius: 100px;
+  background: @blue-200;
+  color: white;
+  .transition(.3s all);
+
+  &:hover{
+    text-decoration: none;
+    color: white;
+    background: @primary;
+  }
+}
+.unfollow-btn{
+  position: relative;
+  background: @green;
+  &:before{
+    content: 'Nicht mehr folgen';
+    position: absolute;
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 100px;
+    background: @red;
+    color: white;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    .transition(.3s all);
+  }
+  &:hover{
+    background: @red;
+    &:before{
+      opacity: 1;
+    }
+  }
+}
+
+
+.short-link{
+  color: #d0d0d0;
+}
+.follow-count{
+  color: @blue-800;
+}
+.follow-container{
+  margin: 0 -15px 15px;
+  overflow: hidden;
+}
+.follow-thumb{
+  display: inline-block;
+  float: left;
+  width: 33.333%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  img{
+    width: 100%;
+  }
+}

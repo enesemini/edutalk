@@ -1,11 +1,12 @@
 // index of logged in users
-.friends-container, .timeline-container{
-  background: @et-bg;
+.friends-container, .timeline-container, .et-container{
+  background: @white;
   padding: 15px;
   margin-bottom: 15px;
+  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.12);
 }
 .groups-container{
-  background: @et-bg;
+  background: @white;
   margin-bottom: 15px;
   padding: 15px 0;
   h3{
@@ -72,28 +73,4 @@
   margin-right: 10px;
 }
 
-.file-talk {
-  p {
-    line-height: 1.4em;
-  }
-}
-
-.talk, .talk-body {
-  overflow: hidden;
-}
-.talk{
-  margin: 2em 0;
-  .user{
-    color: @primary;
-  }
-  .time{
-    font-size: .8em;
-    color: @grey;
-  }
-  .talk-body{
-    p{
-      margin-bottom: 0;
-    }
-  }
-}
 
