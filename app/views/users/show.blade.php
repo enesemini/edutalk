@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
+{{$user}}
 <div class="container">
     <div class="row">
         <div class="col-lg-3">
@@ -42,7 +43,7 @@
 
                 @if(count($user->talks))
                     @foreach ($user->talks as $talk)
-                    <article class="file-talk talk">
+                    <article class="talk">
                         <i class="fa-et fa fa-graduation-cap"></i>
                         <div class="talk-body">
                             <span class="user">{{$talk->user->first_name}} {{$talk->user->last_name}}</span>

@@ -1,10 +1,5 @@
 <?php
 
-/*
- * Bindings
- */
-
-App::bind('Edutalk\Repositories\TalksRepositoryInterface', 'Edutalk\Repositories\DbTalksRepository');
 
 
 /*

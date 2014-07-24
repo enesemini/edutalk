@@ -3,6 +3,7 @@
 namespace Edutalk\Repositories;
 
 use Talk;
+use User;
 
 class DbTalksRepository implements TalksRepositoryInterface {
 
@@ -17,6 +18,7 @@ class DbTalksRepository implements TalksRepositoryInterface {
     {
         return Talk::findOrFail($id);
     }
+
 
 
 } 

@@ -1,15 +1,20 @@
 <?php
 
 use Edutalk\Repositories\TalksRepositoryInterface;
+use Edutalk\Repositories\UsersRepositoryInterface;
 
 class TalksController extends \BaseController {
 
 
     protected $talks;
-    public function __construct(TalksRepositoryInterface $talks)
+    protected $user;
+
+    public function __construct(TalksRepositoryInterface $talks, UsersRepositoryInterface $user)
     {
         $this->talks = $talks;
+        $this->user = $user;
     }
+
 
 	/**
 	 * Display a listing of talks
@@ -19,9 +24,7 @@ class TalksController extends \BaseController {
 	public function index()
 	{
 		$talks = $this->talks->getAll();
-
         //return $talks;
-
 		return View::make('talks.index', compact('talks', 'user'));
 	}
 

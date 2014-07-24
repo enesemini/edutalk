@@ -1,6 +1,19 @@
 <?php
 
+use Edutalk\Repositories\TalksRepositoryInterface;
+use Edutalk\Repositories\UsersRepositoryInterface;
+
 class UsersController extends \BaseController {
+
+
+    protected $talks;
+    protected $user;
+
+    public function __construct(TalksRepositoryInterface $talks, UsersRepositoryInterface $user)
+    {
+        $this->talks = $talks;
+        $this->user = $user;
+    }
 
 	/**
 	 * Display a listing of users
@@ -51,7 +64,12 @@ class UsersController extends \BaseController {
 	 */
 	public function show($username)
 	{
-		$user = User::where('username', $username)->first();
+        $userId = User::where('username', $username)->first()->id;
+        $user = $this->user->getWithTalks($userId);
+
+        //return $user; // richtige Reihenfolge der Talk
+        //return $user->talks; // falsche Reihenfolge der Talks
+
         $followers = $user->followers()->take(6);
         $following = $user->following()->take(6);
 
