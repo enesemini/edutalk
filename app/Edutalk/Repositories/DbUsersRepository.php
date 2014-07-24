@@ -19,12 +19,13 @@ class DbUsersRepository implements UsersRepositoryInterface {
 
     public function getWithTalks($id)
     {
-        $user = User::with(['Talks' => function($query)
+        $user = User::with(['talks' => function($query)
         {
-            $query->orderBy('created_at', 'desc')->get();
+            $query->orderBy('created_at', 'desc');
         }])->find($id);
+
         return $user;
     }
 
 
-} 
+}

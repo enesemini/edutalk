@@ -67,8 +67,6 @@ class UsersController extends \BaseController {
         $userId = User::where('username', $username)->first()->id;
         $user = $this->user->getWithTalks($userId);
 
-        //return $user; // richtige Reihenfolge der Talk
-        //return $user->talks; // falsche Reihenfolge der Talks
 
         $followers = $user->followers()->take(6);
         $following = $user->following()->take(6);
