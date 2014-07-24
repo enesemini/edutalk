@@ -10,7 +10,7 @@
             <div class="timeline-container">
                 <h3>Alle Talks vom eingeloggten User</h3>
 
-                    @foreach ($user->talks as $talk)
+                    @foreach ($talks as $talk)
                     <article class="file-talk talk">
                         <i class="fa-et fa fa-graduation-cap"></i>
                         <div class="talk-body">

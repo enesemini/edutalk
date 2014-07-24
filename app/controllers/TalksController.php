@@ -1,14 +1,14 @@
 <?php
 
-use Edutalk\Repositories\TalksRepository;
+use Edutalk\Repositories\TalksRepositoryInterface;
 
 class TalksController extends \BaseController {
 
 
-    protected $talk;
-    public function __construct(TalksRepository $talk)
+    protected $talks;
+    public function __construct(TalksRepositoryInterface $talks)
     {
-        $this->talk = $talk;
+        $this->talks = $talks;
     }
 
 	/**
@@ -18,8 +18,9 @@ class TalksController extends \BaseController {
 	 */
 	public function index()
 	{
-		$talks = Talk::all();
-        $user = Auth::User();
+		$talks = $this->talks->getAll();
+
+        //return $talks;
 
 		return View::make('talks.index', compact('talks', 'user'));
 	}

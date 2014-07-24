@@ -335,6 +335,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/Edutalk\/Repositories\/TalkRepository.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/Edutalk\/Repositories\/TalkRepository.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/Edutalk\/Talks\/Events\/TalkWasPublished.php": {
 		"fileType": 8192,
 		"ignore": 0,
