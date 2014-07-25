@@ -2,6 +2,51 @@
 
 class UploadsController extends \BaseController {
 
+    /**
+     *
+     * Product Image Upload
+     *
+     **/
+    public function uploadImage()
+    {
+        $user = User::findOrFail(Auth::user()->id);
+        $input = Input::all();
+
+        $rules = ['file' => 'image|max:7000'];
+
+        $validation = Validator::make($input, $rules);
+
+        if ($validation->fails())
+        {
+            return Response::make("Nur Bilder sind erlaubt!", 400);
+        }
+        $file = Input::file('file');
+
+        $ext =$file->getClientOriginalExtension();
+        $destination = 'uploads/users/';
+        $title = $file->getClientOriginalName();
+        $filename = str_random(5);
+        $name = $user->id."-".$filename.".".$ext;
+        $path = $destination.$name;
+
+        $upload_success = $file->move($destination, $name);
+
+
+        if( $upload_success ) {
+            $file = $user->uploads()->create(['title' => $title,'path' => $path, 'user_id' => $user->id]);
+
+            $img = Image::make($path);
+            $img->resize(null,200,function ($constraint) {
+                $constraint->aspectRatio();
+            });
+            $img->save($path, 100);
+
+            return Response::json($file);
+        } else {
+            return Response::json("upload failed", 400);;
+        }
+    }
+
 	/**
 	 * Display a listing of uploads
 	 *

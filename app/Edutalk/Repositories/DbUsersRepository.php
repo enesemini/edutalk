@@ -1,6 +1,7 @@
 <?php
 
 namespace Edutalk\Repositories;
+use Follow;
 use User;
 
 class DbUsersRepository implements UsersRepositoryInterface {
@@ -10,13 +11,18 @@ class DbUsersRepository implements UsersRepositoryInterface {
     {
         return User::orderBy('username', 'asc')->get();
     }
+    public function getAllPaginated($count)
+    {
+        return User::orderBy('username', 'asc')->paginate($count);
+    }
 
-    /* Talk mit der ID $id suchen */
+    /* User mit der ID $id suchen */
     public function find($id)
     {
         return User::findOrFail($id);
     }
 
+    /* User($id) mit all seinen Talks, geordnet nach Erstellungsdatum */
     public function getWithTalks($id)
     {
         $user = User::with(['talks' => function($query)
@@ -25,6 +31,18 @@ class DbUsersRepository implements UsersRepositoryInterface {
         }])->find($id);
 
         return $user;
+    }
+
+    /* Alle User welche dem User mit der ID $id folgen*/
+    public function getPaginatedFollowers($id)
+    {
+        return Follow::where('follow', $id)->paginate(28);
+    }
+
+    /* Alle User denen der User mit der ID $id folgt */
+    public function getPaginatedFollowing($id)
+    {
+        return Follow::where('user_id', $id)->paginate(28);
     }
 
 

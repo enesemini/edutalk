@@ -5,9 +5,12 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-        "way/generators": "2.*",
         "laracasts/commander": "~1.0"
    	},
+    "require-dev": {
+        "way/generators": "2.*",
+        "fzaninotto/faker": "1.4.*"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",

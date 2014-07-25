@@ -41,7 +41,16 @@ Route::get('unfollow/{username}', ['as' => 'unfollow', 'uses' => 'FollowControll
 
 
 /* User Routes */
-Route::get('/@{username}', ['as' => 'users.show', 'uses' => 'UsersController@show']);
+Route::get('/@{username?}', ['as' => 'users.show', 'uses' => 'UsersController@show']);
+
+Route::get('/@{username?}/following', ['as' => 'user.following', 'uses' => 'FollowController@user_following']);
+Route::get('/@{username?}/followers', ['as' => 'user.followers', 'uses' => 'FollowController@user_followers']);
+
+Route::get('/@{username?}/edit', ['as' => 'user.edit', 'uses' => 'UserController@edit']);
+Route::post('/@{username?}/update', ['as' => 'user.update', 'uses' => 'UserController@update']);
+
+
+Route::post('/upload', ['as' => 'uploadImage', 'uses' => 'UploadsController@uploadImage']);
 
 
 /* Test Routes */

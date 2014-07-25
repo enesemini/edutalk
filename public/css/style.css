@@ -7743,6 +7743,15 @@ h3 {
   font-weight: medium;
   margin: 0 0 15px 0;
 }
+h2 {
+  font-size: 1.7em;
+  color: #4f5961;
+  font-weight: medium;
+  margin: 0 0 15px 0;
+}
+.grey {
+  color: #4f5961;
+}
 .friends-container,
 .timeline-container,
 .et-container {
@@ -7884,6 +7893,9 @@ h3 {
 .short-link {
   color: #d0d0d0;
 }
+.follow-header:hover {
+  text-decoration: none;
+}
 .follow-count {
   color: #0277bd;
 }
@@ -7956,6 +7968,14 @@ h3 {
 .btn-et:hover {
   background: #ffffff;
   color: #03a9f4;
+}
+.et-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.et-list-item {
+  margin: 10px 0;
 }
 .et-navbar {
   background: #03a9f4;

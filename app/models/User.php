@@ -33,12 +33,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     ];
 
 
+
     /**
      * Verbindungen zu anderen Tabellen
      */
     public function talks()
     {
-        return $this->hasMany('Talk');
+        return $this->hasMany('Talk')->orderBy('id','desc');
     }
     public function ownsgroups()
     {
@@ -119,6 +120,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         return Follow::where('follow', $this->id)->get();
     }
 
+    public function upload()
+    {
+        return $this->morphMany('Upload', 'uploadable');
+    }
+    public function uploads()
+    {
+        return $this->hasMany('Upload');
+    }
 
 
 }

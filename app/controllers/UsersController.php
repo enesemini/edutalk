@@ -22,7 +22,7 @@ class UsersController extends \BaseController {
 	 */
 	public function index()
 	{
-		$users = User::all();
+        $users = $this->user->getAllPaginated(28);
 
 		return View::make('users.index', compact('users'));
 	}
@@ -83,9 +83,9 @@ class UsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($username)
+	public function edit($id)
 	{
-        $user = User::where('username', $username)->first();
+        $user = User::find($id);
 
 		return View::make('users.edit', compact('user'));
 	}
@@ -99,7 +99,7 @@ class UsersController extends \BaseController {
 	public function update($id)
 	{
 		$user = User::findOrFail($id);
-
+        return $user;
 		$validator = Validator::make($data = Input::all(), User::$rules);
 
 		if ($validator->fails())

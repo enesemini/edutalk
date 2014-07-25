@@ -18,4 +18,9 @@ class Group extends \Eloquent {
         return $this->belongsTo('User');
     }
 
+    public function upload()
+    {
+        return $this->morphMany('Upload', 'uploadable');
+    }
+
 }
