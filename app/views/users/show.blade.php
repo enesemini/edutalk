@@ -8,7 +8,10 @@
             @include('_partials/userProfileSidebar')
         </div>
         <div class="col-lg-6">
-            @include('_partials.createTalk')
+            @if (Auth::id()==$user->id)
+                @include('_partials.createTalk')
+            @endif
+
             <div class="timeline-container">
                 <h3>Talks von {{$user->first_name}} {{$user->last_name}}</h3>
 

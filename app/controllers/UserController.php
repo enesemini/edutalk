@@ -23,17 +23,25 @@ class UserController extends \BaseController {
             'first_name' => 'required',
             'last_name' => 'required'
         ];
+        $updatePasswordRules = [
+            'username' => "required|unique:users,username, $user->id",
+            'email' => "required|email|unique:users,email,$user->id",
+            'password' => 'required|min:6|confirmed',
+            'first_name' => 'required',
+            'last_name' => 'required'
+        ];
 
         $input = Input::all();
 
         if (input::get('password'))
         {
-            $validator = Validator::make($data = Input::all(), $updateRules);
+            $validator = Validator::make($data = Input::all(), $updatePasswordRules);
 
             if ($validator->fails())
             {
                 return Redirect::back()->withErrors($validator)->withInput();
             }
+            $data['password'] = Hash::make($data['password']);
 
             $user->update($data);
 
