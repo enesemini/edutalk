@@ -3,14 +3,15 @@
         <img class="profile-pic" src="js/holder.js/100x100" alt=""/>
         <h1 class="profile-name">{{$user->first_name}} {{$user->last_name}}</h1>
         <a class="profile-username" href="#">{{"@".$user->username}}</a><br/>
-
-        @if (Auth::id()==$user->id)
-            <a class="follow-btn" href="{{URL::route('user.edit', $user->username)}}">Profil bearbeiten</a>
-        @else
-            @if(count(Follow::where('user_id',Auth::id())->where('follow', $user->id)->first()) > 0)
-            <a class="follow-btn unfollow-btn" href="{{URL::route('unfollow', $user->username)}}">Folge ich</a>
+        @if ($signedIn)
+            @if ($currentUser->id==$user->id)
+                <a class="follow-btn" href="{{URL::route('user.edit', $user->username)}}">Profil bearbeiten</a>
             @else
-            <a class="follow-btn" href="{{URL::route('follow', $user->username)}}">Folgen</a>
+                @if(count(Follow::where('user_id',Auth::id())->where('follow', $user->id)->first()) > 0)
+                <a class="follow-btn unfollow-btn" href="{{URL::route('unfollow', $user->username)}}">Folge ich</a>
+                @else
+                <a class="follow-btn" href="{{URL::route('follow', $user->username)}}">Folgen</a>
+                @endif
             @endif
         @endif
 

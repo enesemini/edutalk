@@ -24,12 +24,13 @@
                 @if (Auth::check())
                     <li class="dropdown header-profile">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
-                            <img src="js/holder.js/40x40" alt=""/> Username
+                            <img src="js/holder.js/40x40" alt=""/> {{$currentUser->username}}
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li role="presentation" class="dropdown-header">Username</li>
+                            <li role="presentation" class="dropdown-header">{{$currentUser->username}}</li>
 
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('users.show', Auth::user()->username)}}">Mein Profil</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('users.edit', Auth::user()->username)}}">Profil bearbeiten</a></li>
 
                             <li role="presentation" class="divider"></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::to('/logout')}}">Abmelden <i class="fa fa-sign-out"></i></a></li>
