@@ -2,77 +2,6 @@
 
 @section ('content')
 
-@if(Auth::check())
-<div class="container">
-    <div class="row">
-        <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h2>Hallo {{Auth::user()->username}}, willkommen auf Edutalk!</h2>
-        </div>
-        <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="groups-container">
-                <h3>Gruppen</h3>
-                <ul>
-                    <li>
-                        <img src="js/holder.js/40x40" alt="" class="img-circle"/>
-                        <h4>3fW</h4>
-                        <p>Manuel Egger, Rafael Reifler</p>
-                        <div class="clearfix"></div>
-                    </li>
-                    <li>
-                        <img src="js/holder.js/40x40" alt="" class="img-circle"/>
-                        <h4>Private Gruppe</h4>
-                        <p>Manuel Egger, Rafael Reifler,...</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="timeline-container">
-                <h3>3fW</h3>
-                <div class="file-talk">
-                    <i class="fa-et fa fa-file"></i>
-                    <a href="#" class="btn-et pull-right"><i class="fa fa-download"></i></a>
-                    <p><span class="user">Christoph Gerber</span> hat eine neue Datei hochgeladen.</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3">
-            <div class="friends-container">
-                <h3>5 neuste Freunde</h3>
-                <ul>
-                    <li>
-                        <img src="js/holder.js/40x40" alt="" class="img-circle"/>
-                        <a href="#" class="btn-et" data-toggle="tooltip" data-placement="top" title="Nachricht"><i class="fa fa-comment"></i></a>
-                        <p>Manuel Egger</p>
-                    </li>
-                    <li>
-                        <img src="js/holder.js/40x40" alt="" class="img-circle"/>
-                        <a href="#" class="btn-et" data-toggle="tooltip" data-placement="top" title="Nachricht"><i class="fa fa-comment"></i></a>
-                        <p>Rafael Reifler</p>
-                    </li>
-                    <li>
-                        <img src="js/holder.js/40x40" alt="" class="img-circle"/>
-                        <a href="#" class="btn-et" data-toggle="tooltip" data-placement="top" title="Nachricht"><i class="fa fa-comment"></i></a>
-                        <p>Rafael Reifler</p>
-                    </li>
-                    <li>
-                        <img src="js/holder.js/40x40" alt="" class="img-circle"/>
-                        <a href="#" class="btn-et" data-toggle="tooltip" data-placement="top" title="Nachricht"><i class="fa fa-comment"></i></a>
-                        <p>Rafael Reifler</p>
-                    </li>
-                    <li>
-                        <img src="js/holder.js/40x40" alt="" class="img-circle"/>
-                        <a href="#" class="btn-et" data-toggle="tooltip" data-placement="top" title="Nachricht"><i class="fa fa-comment"></i></a>
-                        <p>Rafael Reifler</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-@else
 <div class="container">
     <div class="jumbotron">
 
@@ -81,7 +10,37 @@
         <a class="btn btn-et btn-lg" href="{{ URL::route('register') }}">Registrieren</a>
 
     </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-4">
+            <div class="home-info">
+                <i class="fa fa-graduation-cap fa-home"></i>
+                <h3>Für Schüler!</h3>
+                <p>Edutalk ist eine Plattform für Schüler zum Austausch von Informationen und Aufgaben.</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="home-info">
+                <i class="fa fa-mobile fa-home"></i>
+                <h3>Zuhause & unterwegs</h3>
+                <p>Greifen Sie mit verschiedenen Geräten auf Ihr Profil zu.</p>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <div class="home-info">
+                <i class="fa fa-shield fa-home"></i>
+                <h3>Privatssphäre</h3>
+                <p>Erstellen Sie ein privates Profil auf Edutalk.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 info-section">
+            <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+        </div>
+    </div>
 </div>
-@endif
+
 
 @stop

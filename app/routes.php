@@ -11,65 +11,56 @@
 
 Route::get('test', function()
 {
-	$users = DB::table('users')->find(1);
+	$user = User::find(1);
 
-    return $users -> username;
+    return dd($user->isInGroup(7));
+
+
 });
 
 /* Startseite */
-Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
+Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home', 'before' => 'guest']);
+Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'PagesController@dashboard', 'before' => 'auth']);
 
 /* Login Routes */
-Route::get('login', ['as' => 'login', 'uses' => 'AuthController@login']);
+Route::get('login', ['as' => 'login', 'uses' => 'AuthController@login', 'before' => 'guest']);
 Route::post('login', ['as' => 'login', 'uses' => 'AuthController@postLogin']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
 
 /* Registration Routes */
-Route::get('register', ['as' => 'register', 'uses' => 'AuthController@register']);
+Route::get('register', ['as' => 'register', 'uses' => 'AuthController@register', 'before' => 'guest']);
 Route::post('register', ['as' => 'register', 'uses' => 'AuthController@postRegister']);
 
 /* Talk Routes */
 Route::resource('talks', 'TalksController');
 
-Route::resource('users', 'UsersController');
-
+/* Group Routes */
 Route::resource('groups', 'GroupsController');
+Route::get('/g/{id}', ['as' => 'groups.show', 'uses' => 'GroupsController@show', 'before' => 'auth']);
+Route::get('/g/{id}/enter', ['as' => 'groups.enterGroup', 'uses' => 'GroupsController@enterGroup', 'before' => 'auth']);
+Route::get('/g/{id}/accept', ['as' => 'groups.acceptInvitation', 'uses' => 'GroupsController@acceptInvitation', 'before' => 'auth']);
+Route::get('/g/{id}/decline', ['as' => 'groups.declineInvitation', 'uses' => 'GroupsController@declineInvitation', 'before' => 'auth']);
+Route::get('/g/{id}/leave', ['as' => 'groups.leaveGroup', 'uses' => 'GroupsController@leaveGroup', 'before' => 'auth']);
+Route::post('/g/invite', ['as' => 'group.invite', 'uses' => 'GroupsController@invite', 'before' => 'auth']);
 
 /* Follow Routes */
-Route::get('follow/{username}', ['as' => 'follow', 'uses' => 'FollowController@follow']);
-Route::get('unfollow/{username}', ['as' => 'unfollow', 'uses' => 'FollowController@unfollow']);
+Route::get('follow/{username}', ['as' => 'follow', 'uses' => 'FollowController@follow', 'before' => 'auth']);
+Route::get('unfollow/{username}', ['as' => 'unfollow', 'uses' => 'FollowController@unfollow', 'before' => 'auth']);
 
 
 /* User Routes */
-Route::get('/@{username?}', ['as' => 'users.show', 'uses' => 'UsersController@show']);
+Route::resource('users', 'UsersController');
 
-Route::get('/@{username?}/following', ['as' => 'user.following', 'uses' => 'FollowController@user_following']);
-Route::get('/@{username?}/followers', ['as' => 'user.followers', 'uses' => 'FollowController@user_followers']);
+Route::get('/@{username?}', ['as' => 'users.show', 'uses' => 'UsersController@show', 'before' => 'auth']);
 
-Route::get('/@{username?}/edit', ['as' => 'user.edit', 'uses' => 'UserController@edit']);
-Route::post('/@{username?}/update', ['as' => 'user.update', 'uses' => 'UserController@update']);
+Route::get('/@{username?}/following', ['as' => 'user.following', 'uses' => 'FollowController@user_following', 'before' => 'auth']);
+Route::get('/@{username?}/followers', ['as' => 'user.followers', 'uses' => 'FollowController@user_followers', 'before' => 'auth']);
+
+Route::get('/@{username?}/edit', ['as' => 'user.edit', 'uses' => 'UserController@edit', 'before' => 'auth']);
+Route::post('/@{username?}/update', ['as' => 'user.update', 'uses' => 'UserController@update', 'before' => 'auth']);
 
 
-Route::post('/upload', ['as' => 'uploadImage', 'uses' => 'UploadsController@uploadImage']);
+Route::post('/upload', ['as' => 'uploadImage', 'uses' => 'UploadsController@uploadImage', 'before' => 'auth']);
 
 
 /* Test Routes */
-Route::get('test', function()
-{
-    $user = User::find(11);
-
-    return $user->follow(9);
-
-    //return dd($user->follow());
-});
-
-Route::get('test2', function()
-{
-    $user = User::find(9);
-
-    $user->follow(13);
-
-    //return User::with('groups')->find(9);
-
-
-});

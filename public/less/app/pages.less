@@ -2,7 +2,40 @@
   color: @grey;
 }
 
-// index of logged in users
+// Index for new users (Route '/')
+.jumbotron{
+  background: white;
+}
+.home-info{
+  text-align: center;
+  h3{
+    color: @black;
+    text-transform: none;
+  }
+  p{
+    color: @grey;
+  }
+}
+.fa-home{
+  font-size: 34px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  color: @blue;
+}
+.info-section{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  h2{
+    color: @blue;
+  }
+  p{
+    color: @grey;
+  }
+}
+
+// Index of logged in users (Route '/')
 .friends-container, .timeline-container, .et-container{
   background: @white;
   padding: 15px;
@@ -49,17 +82,13 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    width: 100%;
     li{
-      img{
-        float: left;
-        margin-right: 10px;
-      }
-      p{
-        line-height: 40px;
-        font-weight: bold;
-      }
+      display: block;
+      width: 100%;
+      min-height: 40px;
       a{
-        float: right;
+
         margin-top: 5px;
       }
     }

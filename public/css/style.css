@@ -7733,8 +7733,11 @@ button.close {
   content: "\f1e2";
 }
 body {
-  background: #f2FaFd;
+  background: #f2fafd;
   -webkit-font-smoothing: antialiased;
+}
+hr {
+  border-color: #c6e9f6;
 }
 h3 {
   text-transform: uppercase;
@@ -7750,6 +7753,37 @@ h2 {
   margin: 0 0 15px 0;
 }
 .grey {
+  color: #4f5961;
+}
+.jumbotron {
+  background: white;
+}
+.home-info {
+  text-align: center;
+}
+.home-info h3 {
+  color: #001a1f;
+  text-transform: none;
+}
+.home-info p {
+  color: #4f5961;
+}
+.fa-home {
+  font-size: 34px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  color: #03a9f4;
+}
+.info-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.info-section h2 {
+  color: #03a9f4;
+}
+.info-section p {
   color: #4f5961;
 }
 .friends-container,
@@ -7799,17 +7833,14 @@ h2 {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
-.friends-container ul li img {
-  float: left;
-  margin-right: 10px;
-}
-.friends-container ul li p {
-  line-height: 40px;
-  font-weight: bold;
+.friends-container ul li {
+  display: block;
+  width: 100%;
+  min-height: 40px;
 }
 .friends-container ul li a {
-  float: right;
   margin-top: 5px;
 }
 .fa-et {
@@ -7976,6 +8007,39 @@ h2 {
 }
 .et-list-item {
   margin: 10px 0;
+  position: relative;
+}
+.et-list-item img {
+  float: left;
+  margin-right: 10px;
+}
+.et-list-item p {
+  line-height: 50px;
+  text-align: left;
+}
+.et-list-item:after {
+  content: "\f19d";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  color: transparent;
+  line-height: 50px;
+  border-radius: 25px;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.et-list-item.selected:after {
+  background: #03a9f4;
+  color: #ffffff;
 }
 .et-navbar {
   background: #03a9f4;
@@ -8070,4 +8134,22 @@ h2 {
 .nav .open > a:focus {
   background-color: #0398db;
   border: none !important;
+}
+.btn-login {
+  display: inline-block;
+  background: #0288d1;
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px !important;
+  margin-top: 22px;
+  border: none;
+  box-shadow: none;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.btn-login:hover {
+  border: none;
+  background: #ffffff !important;
+  color: #03a9f4;
 }

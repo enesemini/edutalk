@@ -19,13 +19,13 @@ class UserController extends \BaseController {
 
         $updateRules = [
             'username' => "required|unique:users,username, $user->id",
-            'email' => "required|email|unique:users,email,$user->id",
+            'email' => "required|email|unique:users,email, $user->id",
             'first_name' => 'required',
             'last_name' => 'required'
         ];
         $updatePasswordRules = [
             'username' => "required|unique:users,username, $user->id",
-            'email' => "required|email|unique:users,email,$user->id",
+            'email' => "required|email|unique:users,email, $user->id",
             'password' => 'required|min:6|confirmed',
             'first_name' => 'required',
             'last_name' => 'required'

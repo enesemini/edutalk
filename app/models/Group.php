@@ -13,9 +13,9 @@ class Group extends \Eloquent {
 	// Don't forget to fill this array
 	protected $fillable = ['name', 'description', 'private', 'user_id'];
 
-    public function user()
+    public function users()
     {
-        return $this->belongsTo('User');
+        return $this->belongsToMany('User');
     }
 
     public function upload()

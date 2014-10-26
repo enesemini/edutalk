@@ -47,7 +47,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     }
     public function groups()
     {
-        return $this->belongsToMany('Group')->withTimestamps();
+        return $this->belongsToMany('Group')->withPivot('activated');
     }
 
     /**
@@ -60,15 +60,27 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
      * Beispiel: User::find(1)->addGroup(1);
      * Erklärung: Dem User mit der ID 1 wird die Gruppe mit der ID 1 zugefügt
      */
-    public function addGroup($id)
+    public function enterGroup($id)
     {
         return $this->groups()->attach($id);
     }
-    public function removeGroup($id)
+    public function leaveGroup($id)
     {
         return $this->groups()->detach($id);
     }
-
+    public function isInGroup($id)
+    {
+        if (in_array($id, $this->groups->lists('id') )) return true;
+        return false;
+    }
+    public function hasAccessToGroup($id)
+    {
+        if (DB::table('group_user')->where('user_id', $this->id)->where('group_id', $id)->where('activated', 1)->get()){
+            return true;
+        } else{
+            return false;
+        }
+    }
     /**
      * Angemeldeter User folgt dem User mit der ID $id
      * Beispiel: User:find(1)->follow(2)

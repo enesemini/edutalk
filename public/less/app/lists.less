@@ -5,4 +5,37 @@
 }
 .et-list-item{
   margin: 10px 0;
+  position: relative;
+  img{
+  	float: left;
+  	margin-right: 10px;
+  }
+  p{
+  	line-height: 50px;
+  	text-align: left;
+  }
+  &:after{
+	content: "\f19d";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 50px;
+	color: transparent;
+	line-height: 50px;
+	border-radius: 25px;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	.transition(.3s);
+	}
+  &.selected{
+  	&:after{
+  		background: @blue;
+		color: @white;
+  	}
+  }
 }

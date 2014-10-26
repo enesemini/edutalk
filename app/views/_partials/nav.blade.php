@@ -7,20 +7,22 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><i class="fa fa-graduation-cap"></i> <strong>edu</strong>talk</a>
+            <a class="navbar-brand" href="{{URL::route('home')}}"><i class="fa fa-graduation-cap"></i> <strong>edu</strong>talk</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#" class="nav-link">Startseiten</a></li>
+                <li class="active"><a href="{{URL::route('home')}}" class="nav-link">Startseite</a></li>
                 <li><a href="#" class="nav-link">Gruppen</a></li>
                 <li><a href="#" class="nav-link">Nachrichten</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                @if (Auth::check())
                 <li class="header-search">
                     <form class="navbar-form" action="">
                         <input type="text" placeholder="Suchen..."/>
                     </form>
                 </li>
+                @endif
                 @if (Auth::check())
                     <li class="dropdown header-profile">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
@@ -37,7 +39,7 @@
                         </ul>
                     </li>
                 @else
-                <li class=""><a href="{{ URL::route('login') }}" class="nav-link">Anmelden <i class="fa fa-sign-in"></i></a></li>
+                <li class=""><a href="{{ URL::route('login') }}" class="btn btn-primary btn-login">Anmelden <i class="fa fa-sign-in"></i></a></li>
                 <li class=""><a href="{{ URL::route('register') }}" class="nav-link">Registrieren <i class="fa fa-lock"></i></a></li>
                 @endif
 
