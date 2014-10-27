@@ -58,7 +58,7 @@ class TalksController extends \BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		if ($input['group_id'] != '')
+		if (isset($input['group_id']))
 		{
 			Talk::create(['message' => $message, 'group_id' => $input['group_id'], 'user_id' => Auth::user()->id]);
 		}
