@@ -64,6 +64,9 @@
             </div>
         </div>
         <div class="col col-xs-12 col-sm-12 col-md-6">
+            @if ($access)
+                @include('_partials.createTalk')
+            @endif
             <div class="et-container">
                 @if ($access)
                     @if (count($talks))

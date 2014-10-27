@@ -8,7 +8,7 @@ class Talk extends \Eloquent {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = ['message', 'user_id'];
+	protected $fillable = ['message', 'group_id', 'user_id'];
 
     public function user()
     {

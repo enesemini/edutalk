@@ -45,20 +45,28 @@ class TalksController extends \BaseController {
 	 */
 	public function store()
 	{
+		$input = Input::all();
         //message
         $message = Input::get('message');
 
-        //Validate if message is empty
+        //Überprüfe ob message leer ist.
 		$validator = Validator::make([ 'message' => $message ], Talk::$rules);
 
-        //Redirect if Validation fails
+        //Redirect, wenn Validation nicht erfolgreich ist.
 		if ($validator->fails())
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-        //Save a talk
+		if ($input['group_id'] != '')
+		{
+			Talk::create(['message' => $message, 'group_id' => $input['group_id'], 'user_id' => Auth::user()->id]);
+		}
+		else
+		{
+        //Talk speichern
 		Talk::create(['message' => $message, 'user_id' => Auth::user()->id]);
+		}
 
 		return Redirect::back()->with('success', 'Ihr Talk wurde gespeichert!');
 	}
