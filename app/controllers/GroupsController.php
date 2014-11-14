@@ -46,15 +46,23 @@ class GroupsController extends \BaseController {
         $description = Input::get('description');
         $private = Input::get('private');
         $user = Auth::user()->id;
+        /*if (!isset($private))
+        {
+        	return $private
+        	$private = '1';
+        }*/
 		$validator = Validator::make($input, Group::$rules);
 
 		if ($validator->fails())
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
-		Group::create(['name' => $name, 'description' => $description, 'private' => $private, 'user_id' => $user]);
+		$group = Group::create(['name' => $name, 'description' => $description, 'private' => $private, 'user_id' => $user]);
 
-		return Redirect::route('groups.index')->with('success', 'Die Gruppe wurde erstellt!');
+		// Bei der erstellten Gruppe beitreten.
+		Auth::user()->enterGroup($group->id);
+		Auth::user()->groups()->updateExistingPivot($group->id, ['activated' => '1']);
+		return Redirect::route('groups.show', $group->id)->with('success', 'Die Gruppe wurde erstellt!');
 	}
 
 	/**

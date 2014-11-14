@@ -4,21 +4,22 @@
 
 <div class="container">
     <div class="row">
-        <div class="col- col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            {{ Form::open(array('route' => 'groups.store')) }}
+        <div class="col col-xs-12 col-sm-6 col-sm-offset-3">
+            <div class="timeline-container">
+                {{ Form::open(array('route' => 'groups.store')) }}
             <!-- Name Form Input -->
             <div class="form-group">
-                {{ Form::label('name','Name:') }}
+                {{ Form::label('name','Gruppenname') }}
                 {{ Form::text('name', null, ['class' => 'form-control']) }}
             </div>
             <!-- Description Form Input -->
             <div class="form-group">
-                {{ Form::label('description','Description:') }}
+                {{ Form::label('description','Beschreibung der Gruppe') }}
                 {{ Form::text('description', null, ['class' => 'form-control']) }}
             </div>
             <!-- Private Form Input -->
             <div class="form-group">
-                {{ Form::label('private','Private:') }}
+                {{ Form::label('private','Privat') }}
                 {{ Form::text('private', null, ['class' => 'form-control']) }}
             </div>
 
@@ -26,7 +27,9 @@
             <div class="form-group">
                 {{ Form::submit('Gruppe erstellen', array('class' => 'btn btn-et pull-right')); }}
             </div>
+            <div class="clearfix"></div>
             {{ Form::close() }}
+            </div>
         </div>
     </div>
 </div>

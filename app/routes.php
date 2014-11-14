@@ -36,6 +36,7 @@ Route::resource('talks', 'TalksController');
 
 /* Group Routes */
 Route::resource('groups', 'GroupsController');
+Route::get('/g/create', ['as' => 'groups.create', 'uses' => 'GroupsController@create', 'before' => 'auth']);
 Route::get('/g/{id}', ['as' => 'groups.show', 'uses' => 'GroupsController@show', 'before' => 'auth']);
 Route::get('/g/{id}/enter', ['as' => 'groups.enterGroup', 'uses' => 'GroupsController@enterGroup', 'before' => 'auth']);
 Route::get('/g/{id}/accept', ['as' => 'groups.acceptInvitation', 'uses' => 'GroupsController@acceptInvitation', 'before' => 'auth']);
