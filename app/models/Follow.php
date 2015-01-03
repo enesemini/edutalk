@@ -4,8 +4,7 @@ class Follow extends \Eloquent {
 	protected $fillable = ['user_id', 'follow'];
 
     /**
-     * The database table used by the model.
-     *
+     * Vom Model benutzte Datenbanktabelle.
      * @var string
      */
     protected $table = 'user_follow';

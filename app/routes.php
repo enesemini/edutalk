@@ -43,6 +43,7 @@ Route::get('/g/{id}/accept', ['as' => 'groups.acceptInvitation', 'uses' => 'Grou
 Route::get('/g/{id}/decline', ['as' => 'groups.declineInvitation', 'uses' => 'GroupsController@declineInvitation', 'before' => 'auth']);
 Route::get('/g/{id}/leave', ['as' => 'groups.leaveGroup', 'uses' => 'GroupsController@leaveGroup', 'before' => 'auth']);
 Route::post('/g/invite', ['as' => 'group.invite', 'uses' => 'GroupsController@invite', 'before' => 'auth']);
+Route::get('/g/{id}/members', ['as' => 'group.members', 'uses' => 'GroupsController@members', 'before' => 'auth']);
 
 /* Follow Routes */
 Route::get('follow/{username}', ['as' => 'follow', 'uses' => 'FollowController@follow', 'before' => 'auth']);
@@ -59,7 +60,7 @@ Route::get('/@{username?}/followers', ['as' => 'user.followers', 'uses' => 'Foll
 
 Route::get('/@{username?}/edit', ['as' => 'user.edit', 'uses' => 'UserController@edit', 'before' => 'auth']);
 Route::post('/@{username?}/update', ['as' => 'user.update', 'uses' => 'UserController@update', 'before' => 'auth']);
-
+Route::get('/{id}/delete', ['as' => 'user.delete', 'uses' => 'UserController@delete', 'before' => 'auth']);
 
 Route::post('/upload', ['as' => 'uploadImage', 'uses' => 'UploadsController@uploadImage', 'before' => 'auth']);
 

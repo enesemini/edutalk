@@ -32,7 +32,7 @@
                             <li role="presentation" class="dropdown-header">{{$currentUser->username}}</li>
 
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('users.show', Auth::user()->username)}}">Mein Profil</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('users.edit', Auth::user()->username)}}">Profil bearbeiten</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::route('user.edit', Auth::user()->username)}}">Profil bearbeiten</a></li>
 
                             <li role="presentation" class="divider"></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="{{URL::to('/logout')}}">Abmelden <i class="fa fa-sign-out"></i></a></li>

@@ -9,4 +9,6 @@ interface UsersRepositoryInterface {
     public function getWithTalks($id);
     public function getPaginatedFollowing($id);
     public function getPaginatedFollowers($id);
+
+    public function getFollowingTalks($id);
 }

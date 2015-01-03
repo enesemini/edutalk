@@ -58,8 +58,17 @@ class UserController extends \BaseController {
 
 
         return Redirect::route('users.show', $data['username'])->withSuccess('Ihr Profil wurde erfolgreich bearbeitet!');
+    }
 
+    public function delete($id)
+    {
+        $user = User::find($id);
+        if (Auth::user()->id !== $user->id){
+            return Redirect::route('home');
+        }
 
+        $user->delete();
+        return Redirect::route('home')->withSuccess('Vielen Dank für die Benutzung von Edutalk! Ihr Profil wurde gelöscht.');
     }
 
 }

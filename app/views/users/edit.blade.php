@@ -38,6 +38,26 @@
             </div>
             <div class="form-group">
                 {{ Form::submit('Speichern', array('class' => 'btn btn-et')); }}
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Profil löschen</button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Löschen bestätigen</h4>
+                      </div>
+                      <div class="modal-body">
+                        Sind Sie sich sicher, dass Sie Ihr Profil löschen wollen?
+                      </div>
+                      <div class="modal-footer">
+                        <a href="{{URL::route('user.delete', $user->id)}}" class="btn btn-danger">Löschen</a>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Schliessen</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
             {{ Form::close() }}
         </div>

@@ -1,13 +1,23 @@
 <?php
 
+use Edutalk\Repositories\UsersRepositoryInterface;
+
 class PagesController extends \BaseController {
+
+	protected $user;
+
+	public function __construct(UsersRepositoryInterface $user)
+	{
+		$this->user = $user;
+	}
+
 
 	/**
 	 * Homepage für nicht eingeloggte Benutzer.
 	 */
 	public function home()
 	{
-        return View::make('pages.home');
+		return View::make('pages.home');
 	}
 
 	/**
@@ -29,8 +39,11 @@ class PagesController extends \BaseController {
 			$groups[] = Group::find($group->group_id);
 		}
 
+		// Alle Talks der abonnierten Benutzer.
 
-		return View::make('pages.dashboard', compact('invitations', 'groups'));
+		$userTalks = $this->user->getFollowingTalks(Auth::user()->id);
+
+		return View::make('pages.dashboard', compact('invitations', 'groups', 'userTalks'));
 	}
 
 }

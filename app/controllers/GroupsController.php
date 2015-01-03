@@ -78,6 +78,8 @@ class GroupsController extends \BaseController {
 		$user_id = Auth::user()->id; // Eingeloggter User
 		$followers = $this->user->getPaginatedFollowers($user_id); // Follower des eingeloggten User für die Einladungen.
 
+		$membersCount = count($group->users);
+		$sideMembers = $group->users->take(6);
 		if ( Auth::user()->hasAccessToGroup($id) ) {
 			// Prüft, ob der eingeloggte User in Gruppe ist, und bestimmt ob er zugriff hat.
 			$access = true;
@@ -87,7 +89,7 @@ class GroupsController extends \BaseController {
 			$access = false;
 		}
 
-		return View::make('groups.show', compact('group', 'admin', 'talks', 'access', 'followers'));
+		return View::make('groups.show', compact('group', 'admin', 'talks', 'access', 'followers', 'sideMembers', 'membersCount'));
 	}
 
 	/**
@@ -218,5 +220,27 @@ class GroupsController extends \BaseController {
 	{
 		Auth::user()->leaveGroup($id);
 		Redirect::route('dashboard', $id);
+	}
+
+	public function members($id)
+	{
+		$group = Group::findOrFail($id);
+		$members = $group->users;
+		$admin = User::find($group->user_id); // Ersteller der Gruppe
+		$user_id = Auth::user()->id; // Eingeloggter User
+		$followers = $this->user->getPaginatedFollowers($user_id); // Follower des eingeloggten User für die Einladungen.
+
+		$membersCount = count($group->users());
+		$sideMembers = $group->users->take(6);
+
+		if ( Auth::user()->hasAccessToGroup($id) ) {
+			// Prüft, ob der eingeloggte User in Gruppe ist, und bestimmt ob er zugriff hat.
+			$access = true;
+		} else {
+			// Wenn der User nicht in der Gruppe ist, dann hat er keinen Zugriff.
+			$access = false;
+		}
+
+		return View::make('groups.members', compact('group', 'access', 'members', 'admin', 'user_id', 'followers', 'membersCount', 'sideMembers'));
 	}
 }

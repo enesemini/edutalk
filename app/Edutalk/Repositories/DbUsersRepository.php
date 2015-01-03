@@ -45,5 +45,18 @@ class DbUsersRepository implements UsersRepositoryInterface {
         return Follow::where('user_id', $id)->paginate(28);
     }
 
+    /* Alle User denen der User mit der ID $id folgt */
+    public function getFollowingTalks($id)
+    {
+        $following = Follow::where('user_id', $id);
+        $users = [];
+
+        foreach ($following as $user)
+        {
+            $users = array_add($users, "user", $user);
+        }
+
+        return $following;
+    }
 
 }

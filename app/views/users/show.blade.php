@@ -22,6 +22,9 @@
                         <div class="talk-body">
                             <span class="user">{{$talk->user->first_name}} {{$talk->user->last_name}}</span>
                             <a href="#" class="short-link"> {{"@".$talk->user->username}}</a>
+                            @if(!$talk->group_id == '')
+                                <span>in {{$talk->group}}</span>
+                            @endif
                             <p>{{$talk->message}}</p>
                             <span class="time">posted {{$talk->created_at->diffForHumans()}}</span>
                         </div>
