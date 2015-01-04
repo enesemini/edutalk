@@ -18,6 +18,11 @@ class Group extends \Eloquent {
         return $this->belongsToMany('User');
     }
 
+    public function talks()
+    {
+        return $this->hasMany('Talk')->orderBy('id','desc');
+    }
+
     public function upload()
     {
         return $this->morphMany('Upload', 'uploadable');

@@ -18,6 +18,7 @@ Route::get('test', function()
 
 });
 
+
 /* Startseite */
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home', 'before' => 'guest']);
 Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'PagesController@dashboard', 'before' => 'auth']);
@@ -30,6 +31,8 @@ Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
 /* Registration Routes */
 Route::get('register', ['as' => 'register', 'uses' => 'AuthController@register', 'before' => 'guest']);
 Route::post('register', ['as' => 'register', 'uses' => 'AuthController@postRegister']);
+
+Route::get('activate/{code}', ['as' => 'activate', 'uses' => 'UserController@activate', 'before' => 'guest']);
 
 /* Talk Routes */
 Route::resource('talks', 'TalksController');
@@ -53,8 +56,8 @@ Route::get('unfollow/{username}', ['as' => 'unfollow', 'uses' => 'FollowControll
 /* User Routes */
 Route::resource('users', 'UsersController');
 
-Route::get('/@{username?}', ['as' => 'users.show', 'uses' => 'UsersController@show', 'before' => 'auth']);
 
+Route::get('/@{username?}', ['as' => 'users.show', 'uses' => 'UsersController@show', 'before' => 'auth']);
 Route::get('/@{username?}/following', ['as' => 'user.following', 'uses' => 'FollowController@user_following', 'before' => 'auth']);
 Route::get('/@{username?}/followers', ['as' => 'user.followers', 'uses' => 'FollowController@user_followers', 'before' => 'auth']);
 

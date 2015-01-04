@@ -1,0 +1,150 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'libmcrypt4',
+1 verbose cli   'libmcrypt-dev' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'libmcrypt4', null ]
+6 verbose cache add name=undefined spec="libmcrypt4" args=["libmcrypt4",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'libmcrypt4',
+7 verbose parsed url   path: 'libmcrypt4',
+7 verbose parsed url   href: 'libmcrypt4' }
+8 verbose cache add [ 'libmcrypt-dev', null ]
+9 verbose cache add name=undefined spec="libmcrypt-dev" args=["libmcrypt-dev",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'libmcrypt-dev',
+10 verbose parsed url   path: 'libmcrypt-dev',
+10 verbose parsed url   href: 'libmcrypt-dev' }
+11 silly lockFile 4dbfc708-libmcrypt4 libmcrypt4
+12 verbose lock libmcrypt4 /Users/Enes/.npm/4dbfc708-libmcrypt4.lock
+13 silly lockFile e60e529a-libmcrypt-dev libmcrypt-dev
+14 verbose lock libmcrypt-dev /Users/Enes/.npm/e60e529a-libmcrypt-dev.lock
+15 silly lockFile 4dbfc708-libmcrypt4 libmcrypt4
+16 silly lockFile 4dbfc708-libmcrypt4 libmcrypt4
+17 verbose addNamed [ 'libmcrypt4', '' ]
+18 verbose addNamed [ null, '*' ]
+19 silly lockFile bbb830a7-libmcrypt4 libmcrypt4@
+20 verbose lock libmcrypt4@ /Users/Enes/.npm/bbb830a7-libmcrypt4.lock
+21 silly lockFile e60e529a-libmcrypt-dev libmcrypt-dev
+22 silly lockFile e60e529a-libmcrypt-dev libmcrypt-dev
+23 verbose addNamed [ 'libmcrypt-dev', '' ]
+24 verbose addNamed [ null, '*' ]
+25 silly lockFile 12e7c0f0-libmcrypt-dev libmcrypt-dev@
+26 verbose lock libmcrypt-dev@ /Users/Enes/.npm/12e7c0f0-libmcrypt-dev.lock
+27 silly addNameRange { name: 'libmcrypt4', range: '*', hasData: false }
+28 silly addNameRange { name: 'libmcrypt-dev', range: '*', hasData: false }
+29 verbose request where is /libmcrypt4
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id d6d4f6ff0f148028
+32 verbose url raw /libmcrypt4
+33 verbose url resolving [ 'https://registry.npmjs.org/', './libmcrypt4' ]
+34 verbose url resolved https://registry.npmjs.org/libmcrypt4
+35 verbose request where is https://registry.npmjs.org/libmcrypt4
+36 info trying registry request attempt 1 at 16:01:31
+37 http GET https://registry.npmjs.org/libmcrypt4
+38 verbose request where is /libmcrypt-dev
+39 verbose request registry https://registry.npmjs.org/
+40 verbose url raw /libmcrypt-dev
+41 verbose url resolving [ 'https://registry.npmjs.org/', './libmcrypt-dev' ]
+42 verbose url resolved https://registry.npmjs.org/libmcrypt-dev
+43 verbose request where is https://registry.npmjs.org/libmcrypt-dev
+44 info trying registry request attempt 1 at 16:01:31
+45 http GET https://registry.npmjs.org/libmcrypt-dev
+46 http 404 https://registry.npmjs.org/libmcrypt4
+47 verbose headers { date: 'Sat, 03 Jan 2015 15:01:31 GMT',
+47 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+47 verbose headers   'content-type': 'application/json',
+47 verbose headers   'cache-control': 'max-age=0',
+47 verbose headers   'content-length': '52',
+47 verbose headers   'accept-ranges': 'bytes',
+47 verbose headers   via: '1.1 varnish',
+47 verbose headers   age: '0',
+47 verbose headers   'x-served-by': 'cache-fra1240-FRA',
+47 verbose headers   'x-cache': 'MISS',
+47 verbose headers   'x-cache-hits': '0',
+47 verbose headers   'x-timer': 'S1420297291.565475,VS0,VE109',
+47 verbose headers   'keep-alive': 'timeout=10, max=50',
+47 verbose headers   connection: 'Keep-Alive' }
+48 silly registry.get cb [ 404,
+48 silly registry.get   { date: 'Sat, 03 Jan 2015 15:01:31 GMT',
+48 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+48 silly registry.get     'content-type': 'application/json',
+48 silly registry.get     'cache-control': 'max-age=0',
+48 silly registry.get     'content-length': '52',
+48 silly registry.get     'accept-ranges': 'bytes',
+48 silly registry.get     via: '1.1 varnish',
+48 silly registry.get     age: '0',
+48 silly registry.get     'x-served-by': 'cache-fra1240-FRA',
+48 silly registry.get     'x-cache': 'MISS',
+48 silly registry.get     'x-cache-hits': '0',
+48 silly registry.get     'x-timer': 'S1420297291.565475,VS0,VE109',
+48 silly registry.get     'keep-alive': 'timeout=10, max=50',
+48 silly registry.get     connection: 'Keep-Alive' } ]
+49 silly lockFile bbb830a7-libmcrypt4 libmcrypt4@
+50 silly lockFile bbb830a7-libmcrypt4 libmcrypt4@
+51 http 404 https://registry.npmjs.org/libmcrypt-dev
+52 verbose headers { date: 'Sat, 03 Jan 2015 15:01:31 GMT',
+52 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+52 verbose headers   'content-type': 'application/json',
+52 verbose headers   'cache-control': 'max-age=0',
+52 verbose headers   'content-length': '52',
+52 verbose headers   'accept-ranges': 'bytes',
+52 verbose headers   via: '1.1 varnish',
+52 verbose headers   age: '0',
+52 verbose headers   'x-served-by': 'cache-fra1246-FRA',
+52 verbose headers   'x-cache': 'MISS',
+52 verbose headers   'x-cache-hits': '0',
+52 verbose headers   'x-timer': 'S1420297291.889483,VS0,VE105',
+52 verbose headers   'keep-alive': 'timeout=10, max=50',
+52 verbose headers   connection: 'Keep-Alive' }
+53 silly registry.get cb [ 404,
+53 silly registry.get   { date: 'Sat, 03 Jan 2015 15:01:31 GMT',
+53 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+53 silly registry.get     'content-type': 'application/json',
+53 silly registry.get     'cache-control': 'max-age=0',
+53 silly registry.get     'content-length': '52',
+53 silly registry.get     'accept-ranges': 'bytes',
+53 silly registry.get     via: '1.1 varnish',
+53 silly registry.get     age: '0',
+53 silly registry.get     'x-served-by': 'cache-fra1246-FRA',
+53 silly registry.get     'x-cache': 'MISS',
+53 silly registry.get     'x-cache-hits': '0',
+53 silly registry.get     'x-timer': 'S1420297291.889483,VS0,VE105',
+53 silly registry.get     'keep-alive': 'timeout=10, max=50',
+53 silly registry.get     connection: 'Keep-Alive' } ]
+54 silly lockFile 12e7c0f0-libmcrypt-dev libmcrypt-dev@
+55 silly lockFile 12e7c0f0-libmcrypt-dev libmcrypt-dev@
+56 error 404 404 Not Found: libmcrypt4
+56 error 404
+56 error 404 'libmcrypt4' is not in the npm registry.
+56 error 404 You should bug the author to publish it
+56 error 404
+56 error 404 Note that you can also install from a
+56 error 404 tarball, folder, or http url, or git url.
+57 error System Darwin 14.0.0
+58 error command "node" "/usr/bin/npm" "install" "libmcrypt4" "libmcrypt-dev"
+59 error cwd /Users/Enes/Projekte/edutalk
+60 error node -v v0.10.33
+61 error npm -v 1.4.28
+62 error code E404
+63 verbose exit [ 1, true ]

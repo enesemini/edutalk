@@ -2,9 +2,9 @@
 
 use Edutalk\Repositories\TalksRepositoryInterface;
 use Edutalk\Repositories\UsersRepositoryInterface;
+use Mail;
 
 class UsersController extends \BaseController {
-
 
     protected $talks;
     protected $user;
@@ -37,24 +37,6 @@ class UsersController extends \BaseController {
 		return View::make('users.create');
 	}
 
-	/**
-	 * Store a newly created user in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		$validator = Validator::make($data = Input::all(), User::$rules);
-
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
-
-		User::create($data);
-
-		return Redirect::route('users.index');
-	}
 
 	/**
 	 * Display the specified user.

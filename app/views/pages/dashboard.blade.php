@@ -30,9 +30,11 @@
                     @if (isset($groups))
                         @foreach ($groups as $group)
                             <li>
-                                <h4>{{$group->name}}</h4>
-                                <p>{{$group->description}}</p>
-                                <div class="clearfix"></div>
+                               <a href="{{URL::route('groups.show', $group->id)}}">
+                                    <h4>{{$group->name}}</h4>
+                                    <p>{{$group->description}}</p>
+                                    <div class="clearfix"></div>
+                               </a>
                             </li>
                         @endforeach
                     @else
@@ -43,6 +45,7 @@
 
         </div>
         <div class="col col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            @include('_partials.createTalk')
             <div class="timeline-container">
                 <h3>Neuste Talks</h3>
                 @if(count($userTalks))
@@ -54,7 +57,7 @@
                             <span class="user">{{$talk->user->first_name}} {{$talk->user->last_name}}</span>
                             <a href="#" class="short-link"> {{"@".$talk->user->username}}</a>
                             @if(!$talk->group_id == '')
-                                <span>in {{$talk->group}}</span>
+                                <span>in <a href="{{URL::route('groups.show', $group->id)}}">{{$talk->group['name']}}</a></span>
                             @endif
                             <p>{{$talk->message}}</p>
                             <span class="time">posted {{$talk->created_at->diffForHumans()}}</span>

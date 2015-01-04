@@ -17,11 +17,15 @@ class AuthController extends \BaseController {
     {
         $input = Input::only('email', 'password');
 
-        if (Auth::attempt(array('email' => $input['email'], 'password' => $input['password'])))
+        $user = User::where('email', '=', $input['email'])->first();
+        if($user->confirmed == '0')
         {
-            return Redirect::intended('/')->with('success', 'Sie sind jetzt eingeloggt.');
+            return Redirect::back()->with('error', 'Bitte Aktivieren Sie Ihren Account.');
+        } elseif (Auth::attempt(array('email' => $input['email'], 'password' => $input['password'])))
+        {
+            return Redirect::intended('/dashboard')->with('success', 'Sie sind jetzt eingeloggt.');
         }
-        return 'nicht eingeloggt';
+        return Redirect::back()->with('error', 'Anmelden fehlgeschlagen.');
     }
 
     // Benutzer wird ausgeloggt und auf die Startseite umgeleitet
@@ -47,7 +51,7 @@ class AuthController extends \BaseController {
     // falls Authentifizierung erfolgreich ist, wird ein neuer User erstellt und man wird eingeloogt
     public function postRegister()
     {
-        $input = Input::only('email','username','password','password_confirmation','first_name','last_name');
+        $input = Input::only('email','username','password','confirmation_code','password_confirmation','first_name','last_name');
 
         $validator = Validator::make($input, User::$rules);
 
@@ -56,12 +60,18 @@ class AuthController extends \BaseController {
             return Redirect::to('register')->withErrors($validator)->withInput();
         }
         $input['password'] = Hash::make($input['password']);
-
+        $input['confirmation_code'] = str_random(60);
         $user = user::create(
             $input
         );
-        Auth::login($user);
-        return Redirect::route('home')->with('success', 'Sie sind jetzt registriert und eingeloggt.');
+
+        Mail::send('emails.auth.activate', ['link' => URL::route('activate', $input['confirmation_code']), 'name' => $input['first_name']], function($message)
+        {
+            $message->to('enes.emini@gmail.com')->subject('Aktivieren Sie Ihren Edutalk Account');
+        });
+
+
+        return Redirect::route('login')->with('success', 'Sie erhalten in kürze eine Email zur Aktivierung Ihres Accounts.');
 
     }
 

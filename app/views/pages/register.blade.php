@@ -30,12 +30,12 @@
                 </div>
                 <!-- Password Form Input -->
                 <div class="form-group">
-                    {{ Form::label('password','Password:') }}
+                    {{ Form::label('password','Passwort:') }}
                     {{ Form::password('password', ['class' => 'form-control']) }}
                 </div>
                 <!-- Password_confirmation Form Input -->
                 <div class="form-group">
-                    {{ Form::label('password_confirmation','Password bestätigen:') }}
+                    {{ Form::label('password_confirmation','Passwort bestätigen:') }}
                     {{ Form::password('password_confirmation', ['class' => 'form-control']) }}
                 </div>
                 <div class="form-group">

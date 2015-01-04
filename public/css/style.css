@@ -7811,6 +7811,14 @@ h2 {
   padding: 15px;
   border-bottom: 1px solid #b9d5e2;
 }
+.groups-container ul li a {
+  color: #4f5961;
+  transition: color .2s linear;
+}
+.groups-container ul li a:hover {
+  text-decoration: none;
+  color: #03a9f4;
+}
 .groups-container ul li:last-child {
   border-bottom: none;
 }

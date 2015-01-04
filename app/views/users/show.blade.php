@@ -21,9 +21,9 @@
                         <i class="fa-et fa fa-graduation-cap"></i>
                         <div class="talk-body">
                             <span class="user">{{$talk->user->first_name}} {{$talk->user->last_name}}</span>
-                            <a href="#" class="short-link"> {{"@".$talk->user->username}}</a>
+                            <a href="{{URL::route('users.show', $talk->user->username)}}" class="short-link"> {{"@".$talk->user->username}}</a>
                             @if(!$talk->group_id == '')
-                                <span>in {{$talk->group}}</span>
+                                <span class="talk-group">in <a href="{{URL::route('groups.show', $talk->group_id)}}">{{$talk->group['name']}}</a></span>
                             @endif
                             <p>{{$talk->message}}</p>
                             <span class="time">posted {{$talk->created_at->diffForHumans()}}</span>

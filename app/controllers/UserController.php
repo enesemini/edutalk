@@ -60,6 +60,15 @@ class UserController extends \BaseController {
         return Redirect::route('users.show', $data['username'])->withSuccess('Ihr Profil wurde erfolgreich bearbeitet!');
     }
 
+    public function activate($code)
+    {
+        $user = User::where('confirmation_code', '=', $code)->first();
+        $user->confirmed = '1';
+        $user->save();
+
+        return Redirect::route('login');
+    }
+
     public function delete($id)
     {
         $user = User::find($id);

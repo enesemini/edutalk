@@ -20,7 +20,7 @@
             <!-- Private Form Input -->
             <div class="form-group">
                 {{ Form::label('private','Privat') }}
-                {{ Form::text('private', null, ['class' => 'form-control']) }}
+                {{ Form::checkbox('private', null, ['class' => 'form-control']) }}
             </div>
 
             <!--  Form Input -->

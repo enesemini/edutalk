@@ -15,6 +15,11 @@ class Talk extends \Eloquent {
         return $this->belongsTo('User');
     }
 
+    public function group()
+    {
+        return $this->belongsTo('Group');
+    }
+
     public function upload()
     {
         return $this->morphMany('Upload', 'uploadable');
