@@ -12,13 +12,18 @@ class GroupsController extends \BaseController {
     }
 
 	/**
-	 * Zeige eine Liste aller Gruppen.
+	 * Zeige eine Liste aller Gruppen, denen der eingeloggte User beigetreten ist.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		$groups = Group::all();
+		// Alle aktivierten Gruppen des eingeloggten Users
+		$activatedGroups = DB::table('group_user')->where('user_id', Auth::id())->where('activated', 1)->get();
+		foreach ($activatedGroups as $group)
+		{
+			$groups[] = Group::find($group->group_id);
+		}
 
 		return View::make('groups.index', compact('groups'));
 	}

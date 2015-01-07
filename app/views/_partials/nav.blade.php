@@ -12,8 +12,10 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="{{URL::route('home')}}" class="nav-link">Startseite</a></li>
-                <li><a href="#" class="nav-link">Gruppen</a></li>
-                <li><a href="#" class="nav-link">Nachrichten</a></li>
+                @if (Auth::check())
+                    <li><a href="{{URL::route('groups.index')}}" class="nav-link">Gruppen</a></li>
+                @endif
+                <li><a href="{{URL::route('about')}}" class="nav-link">Was ist Edutalk?</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())

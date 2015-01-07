@@ -50,7 +50,6 @@
                 <h3>Neuste Talks</h3>
                 @if(count($userTalks))
                     @foreach ($userTalks as $talk)
-                        {{$talk}}
                     <article class="talk">
                         <i class="fa-et fa fa-graduation-cap"></i>
                         <div class="talk-body">

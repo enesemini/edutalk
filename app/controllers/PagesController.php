@@ -42,8 +42,23 @@ class PagesController extends \BaseController {
 		// Alle Talks der abonnierten Benutzer.
 
 		$userTalks = $this->user->getFollowingTalks(Auth::user()->id);
-
 		return View::make('pages.dashboard', compact('invitations', 'groups', 'userTalks'));
+	}
+
+	/**
+	 * Erklärung was Edutalk ist.
+	 */
+	public function about()
+	{
+		return View::make('pages.about');
+	}
+
+	/**
+	 * Impressum
+	 */
+	public function impressum()
+	{
+		return View::make('pages.impressum');
 	}
 
 }

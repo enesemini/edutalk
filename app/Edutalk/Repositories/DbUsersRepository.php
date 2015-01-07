@@ -1,8 +1,7 @@
 <?php
 
 namespace Edutalk\Repositories;
-use Follow;
-use User;
+use Follow, User, Talk;
 
 class DbUsersRepository implements UsersRepositoryInterface {
 
@@ -48,16 +47,10 @@ class DbUsersRepository implements UsersRepositoryInterface {
     /* Alle User denen der User mit der ID $id folgt */
     public function getFollowingTalks($id)
     {
-        $following = User::find($id)->followers();
-        $tasks = [];
-        $users = [];
-        foreach ($following as $user)
-        {
-            $follower = User::find($user->follow);
-            $users = array_add($users, "user", $user);
-        }
+        $userIds = Follow::where('user_id', $id)->lists('follow');
+        $userIds[] = $id;
 
-        return $users;
+        return Talk::whereIn('user_id', $userIds)->latest()->get();
     }
 
 }

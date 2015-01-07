@@ -20,6 +20,7 @@ class FunctionalHelper extends \Codeception\Module
 		$I->amOnPage('/login');
 		$I->fillField('email', $email);
 		$I->fillField('password', $password);
+
 		$I->click('.btn-et');
 	}
 
@@ -28,10 +29,11 @@ class FunctionalHelper extends \Codeception\Module
 		$faker = Faker::create();
 		User::create([
                 'email' => $overrides['email'],
-                'username' => $faker->userName,
-                'first_name' => $faker->firstName,
-                'last_name' => $faker->lastName,
-                'password' => Hash::make($overrides['password'])
+                'username' => 'TestUserName',
+                'first_name' => 'TestFirstName',
+                'last_name' => 'TestLastName',
+                'password' => Hash::make($overrides['password']),
+                'confirmed' => '1'
 			]);
 	}
 

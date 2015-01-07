@@ -66,7 +66,7 @@ class UserController extends \BaseController {
         $user->confirmed = '1';
         $user->save();
 
-        return Redirect::route('login');
+        return Redirect::route('login')->withSuccess('Ihr Account wurde aktiviert!');
     }
 
     public function delete($id)

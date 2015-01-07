@@ -6,6 +6,7 @@
     <div class="row">
         <div class="col col-xs-12 col-sm-6 col-sm-offset-3">
             <div class="timeline-container">
+                <h3>Neue Gruppe kreieren</h3>
                 {{ Form::open(array('route' => 'groups.store')) }}
             <!-- Name Form Input -->
             <div class="form-group">
@@ -25,7 +26,7 @@
 
             <!--  Form Input -->
             <div class="form-group">
-                {{ Form::submit('Gruppe erstellen', array('class' => 'btn btn-et pull-right')); }}
+            <button type="submit" class="btn btn-et pull-right" value="Gruppe erstellen">Gruppe erstellen</button>
             </div>
             <div class="clearfix"></div>
             {{ Form::close() }}

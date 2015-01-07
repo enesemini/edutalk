@@ -13,3 +13,6 @@ $I->click('Talk erstellen');
 $I->seeCurrentUrlEquals('/dashboard');
 
 $I->see('Ihr Talk wurde gespeichert!');
+$I->seeRecord('talks', [
+	'message' => 'CodeCept Test Talk'
+]);

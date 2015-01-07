@@ -2,26 +2,21 @@
 
 @section ('content')
 <div class="container">
-    <div class="row">
+    <div class="row" style="margin-top: 20px;">
         <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1>Gruppen</h1>
+            <a href="{{URL::route('groups.create')}}" class="pull-right btn btn-primary"><i class="fa fa-plus"></i> Gruppe erstellen</a>
+            <h1 style="margin: 0;">Meine Gruppen</h1>
             <hr/>
-            <table class="table table-striped">
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Beschreibung</th>
-                    <th>Ersteller</th>
-                </tr>
+            <div class="row">
                 @foreach ($groups as $group)
-                    <tr>
-                        <td>{{$group->id}}</td>
-                        <td>{{$group->name}}</td>
-                        <td>{{$group->description}}</td>
-                        <td>{{$group->user->first_name}} {{$group->user->last_name}}</td>
-                    </tr>
+                    <div class="col col-xs-12 col-sm-4 col-md-3">
+                        <div class="et-container">
+                            <a href="{{URL::route('groups.show', $group->id)}}">{{$group->name}}</a>
+                            <p>{{$group->description}}</p>
+                        </div>
+                    </div>
                 @endforeach
-            </table>
+            </div>
 
         </div>
     </div>

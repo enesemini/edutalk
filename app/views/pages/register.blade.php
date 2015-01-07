@@ -39,7 +39,8 @@
                     {{ Form::password('password_confirmation', ['class' => 'form-control']) }}
                 </div>
                 <div class="form-group">
-                    {{ Form::submit('Registrieren', array('class' => 'btn btn-et')); }}
+                    <button type="submit" class="btn btn-et pull-right">Registrieren</button>
+                    <div class="clearfix"></div>
                 </div>
                 {{ Form::close() }}
             </div>
