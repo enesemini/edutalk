@@ -106,6 +106,10 @@ class GroupsController extends \BaseController {
 	public function edit($id)
 	{
 		$group = Group::find($id);
+		$admin = User::where('id', $group['user_id'])->first();
+		if (Auth::user()->id !== $admin->id){
+            return Redirect::route('home');
+        }
 
 		return View::make('groups.edit', compact('group'));
 	}
@@ -129,7 +133,7 @@ class GroupsController extends \BaseController {
 
 		$group->update($data);
 
-		return Redirect::route('groups.index');
+		return Redirect::route('groups.show', $id)->withSuccess('Die Änderungen wurden gespeichert');
 	}
 
 	/**

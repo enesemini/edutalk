@@ -6,6 +6,10 @@
                     <p class="profile-description">{{$group->description}}</p>
                     <p>Gruppen Administrator: {{$admin->username}}</p>
 
+                    @if ($admin->username == $currentUser->username)
+                        <a class="follow-btn" href="{{URL::route('groups.edit', $group->id)}}">Gruppe bearbeiten</a>
+                    @endif
+
                     @if ($access)
                     <a class="follow-btn" href="{{URL::route('groups.leaveGroup', $group->id)}}">Austreten</a>
                     <!-- trigger modal  to invite a friend to the group-->

@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-            <div class="login et-tile">
+            <div class="login et-container">
                 <h2>Login</h2>
                 <hr class="dark-hr"/>
                 {{ Form::open(array('route' => 'login')) }}

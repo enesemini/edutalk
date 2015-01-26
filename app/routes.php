@@ -1,23 +1,10 @@
 <?php
-
-
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
 |
 */
-
-Route::get('test', function()
-{
-	$user = User::find(1);
-
-    return dd($user->isInGroup(7));
-
-
-});
-
 
 /* Startseite */
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home', 'before' => 'guest']);
@@ -26,12 +13,16 @@ Route::get('dashboard', ['as' => 'dashboard', 'uses' => 'PagesController@dashboa
 Route::get('/über-edutalk', ['as' => 'about', 'uses' => 'PagesController@about']);
 Route::get('/impressum', ['as' => 'impressum', 'uses' => 'PagesController@impressum']);
 
-/* Login Routes */
+/*
+|--------------------------------------------------------------------------
+| Login & Registration Routes
+|--------------------------------------------------------------------------
+|
+*/
 Route::get('login', ['as' => 'login', 'uses' => 'AuthController@login', 'before' => 'guest']);
 Route::post('login', ['as' => 'login', 'uses' => 'AuthController@postLogin']);
 Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
 
-/* Registration Routes */
 Route::get('registrieren', ['as' => 'register', 'uses' => 'AuthController@register', 'before' => 'guest']);
 Route::post('registrieren', ['as' => 'register', 'uses' => 'AuthController@postRegister']);
 
@@ -40,11 +31,20 @@ Route::get('aktivieren/{code}', ['as' => 'activate', 'uses' => 'UserController@a
 /* Talk Routes */
 Route::resource('talks', 'TalksController');
 
-/* Group Routes */
+/*
+|--------------------------------------------------------------------------
+| Gruppen Routes
+|--------------------------------------------------------------------------
+|
+*/
 Route::resource('groups', 'GroupsController');
+
 Route::get('/gruppen', ['as' => 'groups.index', 'uses' => 'GroupsController@index', 'before' => 'auth']);
 Route::get('/g/erstellen', ['as' => 'groups.create', 'uses' => 'GroupsController@create', 'before' => 'auth']);
 Route::get('/g/{id}', ['as' => 'groups.show', 'uses' => 'GroupsController@show', 'before' => 'auth']);
+Route::get('/g/{id}/edit', ['as' => 'groups.edit', 'uses' => 'GroupsController@edit', 'before' => 'auth']);
+Route::post('/g/{id}/update', ['as' => 'groups.update', 'uses' => 'GroupsController@update', 'before' => 'auth']);
+Route::get('/g/{id}/delete', ['as' => 'groups.delete', 'uses' => 'GroupsController@delete', 'before' => 'auth']);
 Route::get('/g/{id}/beitreten', ['as' => 'groups.enterGroup', 'uses' => 'GroupsController@enterGroup', 'before' => 'auth']);
 Route::get('/g/{id}/akzeptieren', ['as' => 'groups.acceptInvitation', 'uses' => 'GroupsController@acceptInvitation', 'before' => 'auth']);
 Route::get('/g/{id}/ablehnen', ['as' => 'groups.declineInvitation', 'uses' => 'GroupsController@declineInvitation', 'before' => 'auth']);
@@ -56,10 +56,13 @@ Route::get('/g/{id}/mitglieder', ['as' => 'group.members', 'uses' => 'GroupsCont
 Route::get('follow/{username}', ['as' => 'follow', 'uses' => 'FollowController@follow', 'before' => 'auth']);
 Route::get('unfollow/{username}', ['as' => 'unfollow', 'uses' => 'FollowController@unfollow', 'before' => 'auth']);
 
-
-/* User Routes */
+/*
+|--------------------------------------------------------------------------
+| User Routes
+|--------------------------------------------------------------------------
+|
+*/
 Route::resource('users', 'UsersController');
-
 
 Route::get('/@{username?}', ['as' => 'users.show', 'uses' => 'UsersController@show', 'before' => 'auth']);
 Route::get('/@{username?}/following', ['as' => 'user.following', 'uses' => 'FollowController@user_following', 'before' => 'auth']);

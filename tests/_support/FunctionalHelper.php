@@ -1,7 +1,6 @@
 <?php
 namespace Codeception\Module;
 
-use Faker\Factory as Faker;
 use User;
 use Hash;
 // here you can define custom actions
@@ -26,7 +25,6 @@ class FunctionalHelper extends \Codeception\Module
 
 	public function haveAnAccount($overrides = [])
 	{
-		$faker = Faker::create();
 		User::create([
                 'email' => $overrides['email'],
                 'username' => 'TestUserName',
