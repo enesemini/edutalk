@@ -32,8 +32,10 @@
                                         @if($follower->user->isInGroup($group->id))
                                         @else
                                         <div class="col col-xs-6 col-sm-4">
-                                            <li class="et-list-item" id="{{$follower->user->id}}">
-                                                <img class="img-circle" src="js/holder.js/50x50" alt="{{$follower->user->username}}"/>
+                                            <li class="et-list-item center-text" id="{{$follower->user->id}}">
+                                                <div class="block">
+                                                    <img class="img-circle" src="js/holder.js/50x50" alt="{{$follower->user->username}}"/>
+                                                </div>
                                                 <p>{{"@".$follower->user->username}}</p>
                                             </li>
                                         </div>

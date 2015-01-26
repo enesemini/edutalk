@@ -20,6 +20,7 @@ class CreateUserUserTable extends Migration {
 			$table->integer('follow')->unsigned()->index();
 			$table->foreign('follow')->references('id')->on('users')->onDelete('cascade');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 

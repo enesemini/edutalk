@@ -76,6 +76,10 @@ class UserController extends \BaseController {
             return Redirect::route('home');
         }
 
+        $talk = \Talk::where('user_id', $id)->delete();
+        $group = \Group::where('user_id', $id)->delete();
+        $follower = \Follow::where('follow', $id)->delete();
+        $follows = \Follow::where('user_id', $id)->delete();
         $user->delete();
         return Redirect::route('home')->withSuccess('Vielen Dank für die Benutzung von Edutalk! Ihr Profil wurde gelöscht.');
     }

@@ -8,14 +8,20 @@
             <h1 style="margin: 0;">Meine Gruppen</h1>
             <hr/>
             <div class="row">
-                @foreach ($groups as $group)
-                    <div class="col col-xs-12 col-sm-4 col-md-3">
-                        <div class="et-container">
-                            <a href="{{URL::route('groups.show', $group->id)}}">{{$group->name}}</a>
-                            <p>{{$group->description}}</p>
+                @if (isset($groups))
+                    @foreach ($groups as $group)
+                        <div class="col col-xs-12 col-sm-4 col-md-3">
+                            <div class="et-container">
+                                <a href="{{URL::route('groups.show', $group->id)}}">{{$group->name}}</a>
+                                <p>{{$group->description}}</p>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                @else
+                <div class="col-xs-12">
+                    <p>Sie sind noch keiner Gruppe beigetreten. Benutzen Sie die Suchfunktion oder erstellen Sie eine eigene Gruppe!</p>
+                </div>
+                @endif
             </div>
 
         </div>

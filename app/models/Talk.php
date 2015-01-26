@@ -1,6 +1,10 @@
 <?php
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
 
 class Talk extends \Eloquent {
+
+    use SoftDeletingTrait;
+    protected $dates = ['deleted_at'];
 
 	// Add your validation rules here
 	public static $rules = [

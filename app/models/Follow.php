@@ -1,6 +1,12 @@
 <?php
 
+use Illuminate\Database\Eloquent\SoftDeletingTrait;
+
 class Follow extends \Eloquent {
+
+    use SoftDeletingTrait;
+    protected $dates = ['deleted_at'];
+
 	protected $fillable = ['user_id', 'follow'];
 
     /**
