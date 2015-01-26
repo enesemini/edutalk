@@ -20,9 +20,9 @@
             <ul class="nav navbar-nav navbar-right">
                 @if (Auth::check())
                 <li class="header-search">
-                    <form class="navbar-form" action="">
-                        <input type="text" placeholder="Suchen..."/>
-                    </form>
+                    {{ Form::open(array('url' => 'search', 'class' => 'navbar-form')) }}
+                        <input type="text" name="search" placeholder="Suchen..."/>
+                    {{ Form::close() }}
                 </li>
                 @endif
                 @if (Auth::check())

@@ -21,6 +21,29 @@ class PagesController extends \BaseController {
 	}
 
 	/**
+	 * Routes für die Suche
+	 */
+	public function postSearch()
+	{
+		$q = Input::all()['search'];
+
+		return Redirect::route('search', $q);
+	}
+	public function search($q)
+	{
+		$search = $q;
+
+		$searchUsers = User::where('username', 'LIKE', '%'. $q .'%')->get();
+
+		$searchGroups = Group::where('name', 'LIKE', '%'. $q .'%')->orWhere('description', 'LIKE', '%'. $q .'%')->get();
+
+		$searchTalks = Talk::where('message', 'LIKE', '%'. $q .'%')->get();;
+
+		return View::make('pages.search', compact('search', 'searchUsers', 'searchGroups', 'searchTalks'));
+	}
+
+
+	/**
 	 * Homepage für einen eingeloggten Benutzer.
 	 */
 	public function dashboard()

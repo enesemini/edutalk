@@ -15,6 +15,16 @@ Route::get('/impressum', ['as' => 'impressum', 'uses' => 'PagesController@impres
 
 /*
 |--------------------------------------------------------------------------
+| Search Routes
+|--------------------------------------------------------------------------
+|
+*/
+Route::get('search/{q}', ['as' => 'search', 'uses' => 'PagesController@search', 'before' => 'auth']);
+Route::post('search', ['as' => 'postSearch', 'uses' => 'PagesController@postSearch', 'before' => 'auth']);
+
+
+/*
+|--------------------------------------------------------------------------
 | Login & Registration Routes
 |--------------------------------------------------------------------------
 |
