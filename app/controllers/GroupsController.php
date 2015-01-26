@@ -151,12 +151,12 @@ class GroupsController extends \BaseController {
 
 	public function delete($id)
     {
-        $group = Group::find($id);
-        if (Auth::user()->id !== $group->user_id){
+        $deletegroup = Group::find($id);
+        if (Auth::user()->id !== $deletegroup->user_id){
             return Redirect::route('home');
         }
 
-        $group->delete();
+        $deletegroup->delete();
         return Redirect::route('home')->withSuccess('Die Gruppe wurde gelöscht!');
     }
 
