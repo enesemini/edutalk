@@ -149,6 +149,17 @@ class GroupsController extends \BaseController {
 		return Redirect::route('groups.index');
 	}
 
+	public function delete($id)
+    {
+        $user = Group::find($id);
+        if (Auth::user()->id !== $group->user_id){
+            return Redirect::route('home');
+        }
+
+        $group->delete();
+        return Redirect::route('home')->withSuccess('Die Gruppe wurde gelöscht!');
+    }
+
 	/**
 	 * Der eingeloggte Benutzer tritt in eine bestimmte Gruppe ein.
 	 *
