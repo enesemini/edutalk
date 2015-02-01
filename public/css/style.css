@@ -8158,3 +8158,11 @@ h2 {
   background: #ffffff !important;
   color: #03a9f4;
 }
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: none;
+  }
+}
+.navbar-toggle .icon-bar {
+  background: #fff;
+}
