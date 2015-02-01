@@ -69,7 +69,7 @@ class AuthController extends \BaseController {
 
         Mail::send('emails.auth.activate', ['link' => URL::route('activate', $input['confirmation_code']), 'name' => $input['first_name']], function($message)
         {
-            $message->to('Input::get('email'), Input::get('first_name')')->subject('Aktivieren Sie Ihren Edutalk Account');
+            $message->to(Input::get('email'), Input::get('first_name'))->subject('Aktivieren Sie Ihren Edutalk Account');
         });
 
 
