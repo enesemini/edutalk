@@ -57,7 +57,7 @@ class AuthController extends \BaseController {
 
         if ($validator->fails())
         {
-            return Redirect::to('register')->withErrors($validator)->withInput();
+            return Redirect::route('register')->withErrors($validator)->withInput();
         }
         $input['password'] = Hash::make($input['password']);
         $input['confirmation_code'] = str_random(60);
