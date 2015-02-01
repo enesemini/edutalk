@@ -1,7 +1,7 @@
 <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <div class="et-container">
                 <div class="profile-info">
-                    <img class="profile-pic" src="js/holder.js/100x100" alt=""/>
+                    <img class="profile-pic" src="{{asset('img/et-group.jpg')}}" width="100" alt=""/>
                     <h1 class="profile-name">{{$group->name}}</h1>
                     <p class="profile-description">{{$group->description}}</p>
                     <p>Gruppen Administrator: {{$admin->username}}</p>
@@ -34,7 +34,7 @@
                                         <div class="col col-xs-6 col-sm-4">
                                             <li class="et-list-item center-text" id="{{$follower->user->id}}">
                                                 <div class="block">
-                                                    <img class="img-circle" src="js/holder.js/50x50" alt="{{$follower->user->username}}"/>
+                                                    <img class="img-circle" src="{{asset('img/et-user.jpg')}}" width="50" alt="{{$follower->user->username}}"/>
                                                 </div>
                                                 <p>{{"@".$follower->user->username}}</p>
                                             </li>
@@ -66,7 +66,7 @@
                 <div class="follow-container">
                     @foreach ($sideMembers as $member)
                     <a class="follow-thumb" data-toggle="tooltip" title="{{$member->username}}" href="{{URL::route('users.show', $member->username)}}">
-                        <img src="js/holder.js/87x87" alt=""/>
+                        <img src="{{asset('img/et-user.jpg')}}" style="width: 100%; max-width: 200px;" alt=""/>
                     </a>
                     @endforeach
                 </div>

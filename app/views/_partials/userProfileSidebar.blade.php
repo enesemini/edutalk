@@ -1,6 +1,6 @@
 <div class="et-container">
     <div class="profile-info">
-        <img class="profile-pic" src="js/holder.js/100x100" alt=""/>
+        <img class="profile-pic" src="{{asset('img/et-user.jpg')}}" width="100" alt=""/>
         <h1 class="profile-name">{{$user->first_name}} {{$user->last_name}}</h1>
         <a class="profile-username" href="#">{{"@".$user->username}}</a><br/>
         @if ($signedIn)
@@ -20,7 +20,7 @@
     <div class="follow-container">
         @foreach ($followers as $follower)
         <a class="follow-thumb" data-toggle="tooltip" title="{{$follower->user->username}}" href="{{URL::route('users.show', $follower->user->username)}}">
-            <img src="js/holder.js/87x87" alt=""/>
+            <img src="{{asset('img/et-user.jpg')}}" style="width: 100%; max-width: 200px;" alt=""/>
         </a>
         @endforeach
     </div>
@@ -29,7 +29,7 @@
     <div class="follow-container">
         @foreach ($following as $follow)
         <a class="follow-thumb" data-toggle="tooltip" title="{{$follow->follower->username}}" href="{{URL::route('users.show', $follow->follower->username)}}">
-            <img src="js/holder.js/87x87" alt=""/>
+            <img src="{{asset('img/et-user.jpg')}}" style="width: 100%; max-width: 200px;" alt=""/>
         </a>
         @endforeach
     </div>

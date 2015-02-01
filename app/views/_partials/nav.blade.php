@@ -28,7 +28,7 @@
                 @if (Auth::check())
                     <li class="dropdown header-profile">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" href="#">
-                            <img src="js/holder.js/40x40" alt=""/> {{$currentUser->username}}
+                            <img src="{{asset('img/et-user.jpg')}}" width="40" alt=""/> {{$currentUser->username}}
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li role="presentation" class="dropdown-header">{{$currentUser->username}}</li>

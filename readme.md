@@ -6,13 +6,37 @@ Betreut von Guido Schöb.
 
 
 ### Verfügbare Routes
-`/login` Benutzer kann sich anmelden, falls er bereits angemeldet ist, wird er auf die Startseite umgeleitet
-`/register` Benutzer kann sich registrieren, falls er bereits angemeldet ist, wird er auf die Startseite umgeleitet
+`/` Startseite.
 
-`/talks` Benutzer kann hier einen Talk erstellen und sieht momentan seine eigenen Talks, wird noch erweitert mit den Talks anderer Benutzer, welchen gefolgt wird
+`/dashbaord` Wenn man angemeldet ist, sieht man hier eine Übersicht der Gruppen, sowie alle neuen Talks der Benutzer, denen man folgt.
 
-`/talks/{id}` Darstellung eines bestimmten Talks mit der id {id}
+`/login` Der Benutzer kann sich anmelden, falls er bereits angemeldet ist, wird er auf die Startseite umgeleitet
 
-`/groups` Tabelle aller erstellten Gruppen
+`/logout` Der angemeldete Benutzer wird abgemeldet, sobald er diese Route besucht.
 
-`/groups/create` Neue Gruppe erstellen
+`/register` Der Benutzer kann sich registrieren, falls er bereits angemeldet ist, wird er auf die Startseite umgeleitet
+
+
+`/@{username}` Darstellung des Profils eines Benutzers.
+`/@{username}/edit` Formular zur Bearbeitung eines Benutzers.
+
+`/@{username}/followers` Alle Benutzer, die dem Benutzer (username) folgen.
+`/@{username}/following` Alle Benutzer, denen der Benutzer (username) folgt.
+
+
+`/gruppen` Übersicht aller Gruppen, denen der angemeldete Benutzer beigetreten ist.
+
+`/g/erstellen` Formular zur Erstellung einer Gruppe
+
+`/g/{id}` Darstellung der Gruppe mit einer bestimmten id.
+
+`/g/{id}/mitglieder` Übersicht aller Mitglieder einer Gruppe.
+
+`/g/{id}/edit` Formular zur Bearbeitung einer bestimmten Gruppe.
+
+`/g/{id}/delete` Eine Gruppe wird gelöscht, solbald der Admin diese Route aufruft.
+
+`follow/{username}` Einem Benutzer folgen.
+
+`unfollow/{username}` Einem Benutzer nicht mehr folgen.
+
