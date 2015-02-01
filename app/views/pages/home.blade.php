@@ -34,12 +34,12 @@
         </div>
     </div>
 
-    <div class="row">
+    {{--<div class="row">
         <div class="col-xs-12 col-sm-8 col-sm-offset-2 info-section">
             <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h2>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
         </div>
-    </div>
+    </div>--}}
 </div>
 
 
